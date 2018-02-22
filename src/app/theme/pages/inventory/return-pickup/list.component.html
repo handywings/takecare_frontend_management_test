@@ -1,0 +1,244 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+					รับคืนการเบิก
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/inventory" class="m-nav__link">
+						<span class="m-nav__link-text">
+							ระบบคลังสินค้า
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<span class="m-nav__link-text">
+						รับคืนการเบิก
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__head">
+			<div class="m-portlet__head-caption">
+				<div class="m-portlet__head-title">
+					<h3 class="m-portlet__head-text">
+						ค้นหารายการรับคืน
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="m-portlet__body">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							คำค้น/เลขที่เอกสาร
+						</label>
+						<select class="form-control m-select2 m_select2_1" name="param">
+							<option>
+								-- ทั้งหมด --
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							ช่วงวันที่เอกสาร
+						</label>
+						<div class="input-daterange input-group" id="m_datepicker_5">
+							<input class="form-control m-input" name="start" id="datestart" type="text">
+							<div class="input-group-append">
+								<span class="input-group-text">
+									ถึง
+								</span>
+							</div>
+							<input class="form-control" name="end" type="text" id="dateend">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							ประเภทการเบิก
+						</label>
+						<select class="form-control" name="parsam">
+							<option value="">-- ทั้งหมด --</option>
+							<option value="">ขอเบิกใช้</option>
+							<option value="">ขอเบิกผลิต</option>
+							<option value="">ขอเบิกตัวอย่าง</option>
+							<option value="">ขอเบิกเพื่อซ่อม</option>
+							<option value="">ขอเบิกตัดชำรุด</option>
+							<option value="">ขอเบิกยืม</option>
+							<option value="">ขอเบิกเพื่อสำรอง</option>
+							<option value="">ขอเบิกอื่นๆ</option>
+						</select>
+					</div>
+				</div> 
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							ผู้ขอเบิก
+						</label>
+						<select class="form-control m-select2 m_select2_1" name="param">
+							<option>
+								-- ทั้งหมด --
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							หน่วยงานที่เบิก
+						</label>
+						<select class="form-control m-select2 m_select2_1" name="param">
+							<option>
+								-- ทั้งหมด --
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							สาขา/บริษัท
+						</label>
+						<select class="form-control m-select2 m_select2_1" name="param">
+							<option>
+								-- ทั้งหมด --
+							</option>
+						</select>
+					</div>
+				</div> 
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<button class="btn btn-info" type="button">
+						<i class="la la-search"></i> ค้นหา
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__head">
+			<div class="m-portlet__head-caption">
+				<div class="m-portlet__head-title">
+					<h3 class="m-portlet__head-text">
+						รายการใบรับคืน
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="m-portlet__body">
+			  <!--begin: Datatable -->
+			  <table class="m-datatable-tab1" width="100%">
+				<thead>
+					<tr>
+						<th title="Field #1">
+							เลขเอกสาร
+						</th>
+						<th title="Field #2">
+							วันที่เอกสาร
+						</th>
+						<th title="Field #3">
+							ประเภทการรับคืน
+						</th>
+						<th title="Field #4">
+							ผู้แจ้งรับคืน
+						</th>
+						<th title="Field #5">
+							ต้นทุนรับคืน(บาท)
+						</th>
+						<th title="Field #6">
+							หมายเหตุ
+						</th> 
+						<th title="Field #7">
+							
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="">XXXXX</a></td>
+						<td>XX-XXXX-XXXX</td>
+						<td>XXXXXXXX</td>
+						<td>
+							นายพิสิษฐ์ งามการ
+							<br/> it support
+							<br/> it handywing co.,Ltd
+						</td>
+						<td>XX,XXX</td>
+						<td>XXXXXXXXXXXXXXXXXXXX</td>
+						<td>
+							<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><a href="">XXXXX</a></td>
+						<td>XX-XXXX-XXXX</td>
+						<td>XXXXXXXX</td>
+						<td>
+							นายธเนศ ล้อมเขื่อน
+							<br/> it support
+							<br/> it handywing co.,Ltd
+						</td>
+						<td>XX,XXX</td>
+						<td>XXXXXXXXXXXXXXXXXXXX</td>
+						<td>
+							<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+				
+					<tr>
+						<td><a href="">XXXXX</a></td>
+						<td>XX-XXXX-XXXX</td>
+						<td>XXXXXXXX</td>
+						<td>
+							นายธนารัตน์ สุวรรณนันท์
+							<br/> it support
+							<br/> it handywing co.,Ltd
+						</td>
+						<td>XX,XXX</td>
+						<td>XXXXXXXXXXXXXXXXXXXX</td>
+						<td>
+							<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--end: Datatable -->
+		</div>
+	</div>
+</div>

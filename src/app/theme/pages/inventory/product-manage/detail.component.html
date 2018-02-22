@@ -1,0 +1,461 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				บันทึกใบปรับปรุงเพิ่มลดสินค้า
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/inventory" class="m-nav__link">
+						<span class="m-nav__link-text">
+							ระบบคลังสินค้า
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/inventory/productmanage" class="m-nav__link">
+						<span class="m-nav__link-text">
+							รายการใบบันทึกปรับปรุงเพิ่มลดสินค้า
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<span class="m-nav__link-text">
+						บันทึกใบปรับปรุงเพิ่มลดสินค้า
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__body">
+			<div class="row">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>&nbsp;&nbsp;&nbsp;รายละเอียดการปรับปรุงสินค้า&nbsp;&nbsp;&nbsp;</legend>
+						<div class="row">
+							<div class="col-md-2">
+								<b>
+									วันที่เอกสาร
+								</b>
+							</div>
+							<div class="col-md-2">
+								XXXXXXXXXXXXXXX
+							</div>
+							<div class="col-md-1">
+								<b>
+									หมายเหตุ
+								</b>
+							</div>
+							<div class="col-md-7">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-2">
+								<b>
+									อ้างอิงใบตรวจนับ
+								</b>
+							</div>
+							<div class="col-md-2">
+								XXXXXXXXXXXXXXX
+							</div>
+						</div>
+						<div class="row mt-3">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ผู้ขอเบิก
+									</label>
+									นายสมชาย กลัดเข็ม ตำแหน่ง Programmer แผนก IT
+								</div>
+							</div>
+						</div>
+						<hr />
+						<div class="m-form__group form-group row">
+							<div class="col-lg-12 col-xs-12">
+								<a href="#" data-toggle="modal" data-target="#m_modal_1">
+									<div class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right" data-repeater-create="">
+										<span>
+											<i class="la la-plus"></i>
+											<span>
+												เพิ่มรายการสินค้าเบิก
+											</span>
+										</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="row">
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<thead class="thead-bg">
+										<tr>
+											<td rowspan="2">รหัสสินค้า</td>
+											<td rowspan="2">ชื่อสินค้า</td>
+											<td colspan="2">เบิกไป</td>
+											<td rowspan="2">จำนวนปรับปรุง</td>
+											<td rowspan="2">ผลต่อคลัง</td>
+											<td rowspan="2">ต้นทุน (บาท)</td>
+											<td rowspan="2">รวม (บาท)</td>
+											<td rowspan="2"></td>
+										</tr>
+										<tr>
+											<td>คลังสินค้า</td>
+											<td>ที่เก็บ</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>XXXX</td>
+											<td>
+													XXXXXXXX (TH/EN)<br/>
+													S/N XXXXXXXXXXX<br />
+													กลุ่ม/หมวดหมู่สินค้า
+											</td>
+											<td>XXXXX</td>
+											<td>XXX</td>
+											<td>
+													XXX ลัง<br />
+													XXX กล่อง<br />
+													XXX ขวด
+											</td>
+											<td>เพิ่ม</td>
+											<td>
+												<table>
+													<tr>
+														<td style="border:0px !important">
+															<input class="form-control" type="number">
+														</td>
+														<td style="border:0px !important">
+															/ลัง
+														</td>
+													</tr>
+													<tr>
+														<td style="border:0px !important">
+															<input class="form-control" type="number">
+														</td>
+														<td style="border:0px !important">
+															/กล่อง
+														</td>
+													</tr>
+													<tr>
+														<td style="border:0px !important">
+															<input class="form-control" type="number">
+														</td>
+														<td style="border:0px !important">
+															/ขวด
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>XXXXXXXXXX</td>
+											<td>
+												<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+												 title="Edit details">
+													<i class="la la-trash"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td>XXXX</td>
+											<td>
+												XXXXXXXX (TH/EN)
+												<br /> กลุ่ม/หมวดหมู่สินค้า
+											</td>
+											<td>XXXXX</td>
+											<td>XXX</td>
+											<td>
+												XXX ถุง
+												<br /> XXX ห่อ
+											</td>
+											<td>เพิ่ม</td>
+											<td>
+												<table>
+													<tr>
+														<td style="border:0px !important">
+															<input class="form-control" type="number">
+														</td>
+														<td style="border:0px !important">
+															/ถุง
+														</td>
+													</tr>
+													<tr>
+														<td style="border:0px !important">
+															<input class="form-control" type="number">
+														</td>
+														<td style="border:0px !important">
+															/ห่อ
+														</td>
+													</tr>
+												</table>
+											</td>
+											<td>XXXXXXXXXX</td>
+											<td>
+												<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-danger m-btn--icon m-btn--icon-only m-btn--pill"
+												 title="Edit details">
+													<i class="la la-trash"></i>
+												</a>
+											</td>
+										</tr>
+										</tbody>
+								</table>
+							</div>
+						</div>
+
+						<hr />
+						<br />
+						<div class="row">
+							<div class="col-md-6">
+								<button class="btn btn-success pull-right" type="button">
+									บันทึกข้อมูล
+								</button>
+							</div>
+							<div class="col-md-6">
+								<button class="btn btn-danger pull-left" type="button">
+									ยกเลิก
+								</button>
+							</div>
+						</div>
+
+						<!--begin::Modal-->
+						<div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-llg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">
+												<i class="la la-search"></i> ค้นหาสินค้า
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">
+													&times;
+												</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<!--begin: Search Form -->
+											<div class="row">
+												<div class="col-md-3">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															ชื่อหรือรหัส
+														</label>
+														<input type="text" class="form-control" placeholder="">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															กลุ่มสินค้า
+														</label>  
+														<select class="form-control" name="param">
+															<option>
+																-- ทั้งหมด --
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															หมวดหมู่สินค้า
+														</label>
+														<select class="form-control" name="param">
+															<option>
+																-- ทั้งหมด --
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															คลังสินค้า
+														</label>
+														<select class="form-control" name="param">
+															<option>
+																-- ทั้งหมด --
+															</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-3">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															ยี่ห้อสินค้า
+														</label>
+														<select class="form-control" name="param">
+															<option>
+																-- ทั้งหมด --
+															</option>
+														</select>
+													</div>
+												</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ตำแหน่งเก็บ
+															</label>  
+															<select class="form-control" name="param">
+																<option>
+																	-- ทั้งหมด --
+																</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																สถานะสินค้า
+															</label>
+															<select class="form-control" name="param">
+																<option>
+																	-- ทั้งหมด --
+																</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ผู้จำหน่าย
+															</label>
+															<select class="form-control" name="param">
+																<option>
+																	-- ทั้งหมด --
+																</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-12 text-center">
+														<button class="btn btn-info" type="button">
+															<i class="la la-search"></i> ค้นหา
+														</button>
+													</div>
+												</div>
+											<!--end: Search Form -->
+											 <hr/>
+											<!--begin: Datatable -->
+											<table class="m-datatable-modal1" width="100%" id="html_table_2">
+												<thead class="thead-bg">
+													<tr>
+														<th class="text-center">
+															<label class="m-checkbox  m-checkbox--success">
+																<input type="checkbox">
+																<span></span>
+															</label>
+														</th>
+														<th class="text-center">
+															รหัสสินค้า
+														</th>
+														<th class="text-center">
+															ชื่อสินค้า
+														</th>
+														<th class="text-center">
+															S/N
+														</th>
+														<th class="text-center">
+															หมวดสินค้า
+														</th>
+														<th class="text-center">
+															คลังสินค้า
+														</th>
+														<th class="text-center">
+															คงเหลือที่เบิกได้
+														</th>
+														<th class="text-center">
+															สถานะสินค้า
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="text-center">
+															<label class="m-checkbox m-checkbox--solid m-checkbox--success">
+																<input type="checkbox">
+																<span></span>
+															</label>
+														</td>
+														<td>PRO-00001</td>
+														<td>XXXXXXXXX</td>
+														<td>A-001-AA</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+													</tr>
+													<tr>
+														<td class="text-center">
+															<label class="m-checkbox m-checkbox--solid m-checkbox--success">
+																<input type="checkbox">
+																<span></span>
+															</label>
+														</td>
+														<td>PRO-00002</td>
+														<td>XXXXXXXXX</td>
+														<td>A-002-AA</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+													</tr>
+													<tr>
+														<td class="text-center">
+															<label class="m-checkbox m-checkbox--solid m-checkbox--success">
+																<input type="checkbox">
+																<span></span>
+															</label>
+														</td>
+														<td>PRO-00003</td>
+														<td>XXXXXXXXX</td>
+														<td>A-003-AA</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+														<td>XXXXXX</td>
+													</tr>
+												</tbody>
+											</table>
+											<!--end: Datatable -->
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-dismiss="modal">
+												บันทึกการเลือกสินค้า
+											</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">
+												ปิด
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end::Modal-->
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

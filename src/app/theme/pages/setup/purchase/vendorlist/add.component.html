@@ -1,0 +1,1878 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				เพิ่มข้อมูลผู้ขาย
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+						/
+					</li>
+					<li class="m-nav__item">
+						<a routerLink="/setup" class="m-nav__link">
+							<span class="m-nav__link-text">
+								ตั้งค่าเริ่มต้น
+							</span>
+						</a>
+					</li>
+					<li class="m-nav__separator">
+						/
+					</li>
+					<li class="m-nav__item">
+						<a routerLink="/setup/purchase" class="m-nav__link">
+							<span class="m-nav__link-text">
+								Purchase
+							</span>
+						</a>
+					</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/setup/purchase/vendorlist" class="m-nav__link">
+						<span class="m-nav__link-text">
+							รายการผู้ขาย
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+						<span class="m-nav__link-text">
+							เพิ่มข้อมูลผู้ขาย
+						</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+		<!--Begin::Main Portlet-->
+		<div class="m-portlet m-portlet--full-height">
+			<!--begin: Portlet Head-->
+			<div class="m-portlet__head">
+				<div class="m-portlet__head-caption">
+					<div class="m-portlet__head-title">
+						<h3 class="m-portlet__head-text">
+							เพิ่มข้อมูลผู้ขาย
+						</h3>
+					</div>
+				</div>
+			</div>
+			<!--end: Portlet Head-->     <!--begin: Form Wizard-->
+			<div class="m-wizard m-wizard--2 m-wizard--success" id="m_wizard">
+				<!--begin: Message container -->
+				<div class="m-portlet__padding-x">
+					<!-- Here you can put a message or alert -->
+				</div>
+				<!--end: Message container -->         <!--begin: Form Wizard Head -->
+				<div class="m-wizard__head m-portlet__padding-x" style="margin: 3rem 0 3rem 0;">
+					<!--begin: Form Wizard Progress -->
+					<div class="m-wizard__progress">
+						<div class="progress">
+							<div class="progress-bar" role="progressbar"  aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+					</div>
+					<!--end: Form Wizard Progress -->               <!--begin: Form Wizard Nav -->
+					<div class="m-wizard__nav">
+						<div class="m-wizard__steps">
+							<div class="m-wizard__step m-wizard__step--current"  data-wizard-target="#m_wizard_form_step_1">
+								<a href="#"  class="m-wizard__step-number">
+									<span>
+										<i class="flaticon-information"></i>
+									</span>
+								</a>
+								<div class="m-wizard__step-info">
+									<div class="m-wizard__step-title">
+										รายละเอียด
+									</div>
+								</div>
+							</div>
+							<div class="m-wizard__step" data-wizard-target="#m_wizard_form_step_2">
+								<a href="#" class="m-wizard__step-number">
+									<span>
+										<i class="flaticon-coins"></i>
+									</span>
+								</a>
+								<div class="m-wizard__step-info">
+									<div class="m-wizard__step-title">
+										เงื่อนไขการเงิน
+									</div>
+								</div>
+							</div>
+							<div class="m-wizard__step" data-wizard-target="#m_wizard_form_step_3">
+								<a href="#" class="m-wizard__step-number">
+									<span>
+										<i class="flaticon-support"></i>
+									</span>
+								</a>
+								<div class="m-wizard__step-info">
+									<div class="m-wizard__step-title">
+										ผู้ติดต่อ
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end: Form Wizard Nav -->
+				</div>
+				<!--end: Form Wizard Head -->           <!--begin: Form Wizard Form-->
+				<div class="m-wizard__form">
+					<!--                 1) Use m-form--label-align-left class to alight the form input lables to the right                 2) Use m-form--state class to highlight input control borders on form validation                 -->
+					<form class="m-form m-form--label-align-left- m-form--state-" id="m_form">
+						<!--begin: Form Body -->
+						<div class="m-portlet__body">
+							<!--begin: Form Wizard Step 1-->
+							<div class="m-wizard__form-step m-wizard__form-step--current" id="m_wizard_form_step_1">
+								<div class="row">
+										<div class="col-md-12">
+											<fieldset>
+												<legend>&nbsp;&nbsp;&nbsp;ข้อมูลผู้ขาย&nbsp;&nbsp;&nbsp;</legend>
+												<div class="row">
+													<div class="col-md-4">
+														<div class="m-checkbox-list form-group">
+															<label class="m-checkbox">
+																<input type="checkbox">
+																ยกเลิกผู้ขายนี้
+																<span></span>
+															</label>
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="m-checkbox-list form-group">
+															<label class="m-checkbox">
+																<input type="checkbox">
+																ระงับผู้ขายนี้ชั่วคราว
+																<span></span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ชื่อผู้ขาย (TH) :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกชื่อผู้ขาย (TH)">
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ชื่อผู้ขาย (EN) :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกชื่อผู้ขาย (EN)">
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ชื่อไม่เป็นทางการ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกชื่อไม่เป็นทางการ">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																กลุ่มผู้ขาย :
+															</label>
+															<select class="form-control m-select2 m_select2_1" name="param">
+																<option>
+																	กลุ่มผู้ขาย
+																</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-4">
+															<div class="form-group">
+																<label for="recipient-name" class="form-control-label">
+																	กลุ่มภาษี :
+																</label>
+																<select class="form-control m-select2 m_select2_1" name="param">
+																	<option>
+																		กลุ่มภาษี
+																	</option>
+																</select>
+															</div>
+														</div>
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																เว็บไซต์ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกเว็บไซต์">
+														</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+									</div>
+									<br/>
+									<!-- ที่อยู่ตาม ภพ. 20 -->  
+									<div class="row">
+										<div class="col-md-12">
+											<fieldset>
+												<legend>&nbsp;&nbsp;&nbsp;ที่อยู่ตาม ภพ. 20&nbsp;&nbsp;&nbsp;</legend>
+												<div class="row">
+													<div class="col-md-2">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																บ้านเลขที่ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกบ้านเลขที่">
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																หมู่บ้าน / โครงการ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกหมู่บ้าน / โครงการ">
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																อาคาร :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกอาคาร">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ชั้นที่ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกชั้นที่">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ห้อง :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกห้อง">
+														</div>
+													</div>
+												</div>
+												<div class="row">				
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																รหัสไปรษณีย์ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกรหัสไปรษณีย์">
+														</div>
+													</div>	
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ตำบล/แขวง :
+															</label>
+															<select class="form-control m-select2 m_select2_1" name="param">
+																<option>
+																	ตำบล/แขวง
+																</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																อำเภอ/เขต :
+															</label>
+															<select class="form-control m-select2 m_select2_1" name="param">
+																<option>
+																	อำเภอ/เขต
+																</option>
+															</select>
+														</div>
+													</div>								
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																จังหวัด :
+															</label>
+															<select class="form-control m-select2 m_select2_1" name="param">
+																<option>
+																	จังหวัด
+																</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+									</div>
+									<br/>
+									<!-- ที่อยู่ติดต่ออื่น -->  
+									<div class="row">
+										<div class="col-md-12">
+											<fieldset>
+												<legend>&nbsp;&nbsp;&nbsp;ที่อยู่ติดต่ออื่น&nbsp;&nbsp;&nbsp;</legend>
+												<div class="row">
+													<div class="col-md-2">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																บ้านเลขที่ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกบ้านเลขที่">
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																หมู่บ้าน / โครงการ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกหมู่บ้าน / โครงการ">
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																อาคาร :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกอาคาร">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ชั้นที่ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกชั้นที่">
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ห้อง :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกห้อง">
+														</div>
+													</div>
+												</div>
+												<div class="row">				
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																รหัสไปรษณีย์ :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกรหัสไปรษณีย์">
+														</div>
+													</div>	
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																ตำบล/แขวง :
+															</label>
+															<select class="form-control m-select2 m_select2_1" name="param">
+																<option>
+																	ตำบล/แขวง
+																</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																อำเภอ/เขต :
+															</label>
+															<select class="form-control m-select2 m_select2_1" name="param">
+																<option>
+																	อำเภอ/เขต
+																</option>
+															</select>
+														</div>
+													</div>								
+													<div class="col-md-3">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																จังหวัด :
+															</label>
+															<select class="form-control m-select2 m_select2_1" name="param">
+																<option>
+																	จังหวัด
+																</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+									</div>
+									<br/>
+									<!-- รายละเอียดทั่วไป -->  
+									<div class="row">
+										<div class="col-md-12">
+											<fieldset>
+												<legend>&nbsp;&nbsp;&nbsp;รายละเอียดทั่วไป&nbsp;&nbsp;&nbsp;</legend>
+												<div class="row">
+														<div class="col-xl-9 offset-xl-1">
+															<!--begin::Section-->
+															<ul class="nav nav-tabs m-tabs-line--2x m-tabs-line m-tabs-line--info" role="tablist">
+																<li class="nav-item m-tabs__item">
+																	<a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_form_confirm_1" role="tab">
+																		บุคคลธรรมดา
+																	</a>
+																</li>
+																<li class="nav-item m-tabs__item">
+																	<a class="nav-link m-tabs__link" data-toggle="tab" href="#m_form_confirm_2" role="tab">
+																		นิติบุคคล
+																	</a>
+																</li>
+															</ul>
+															<div class="tab-content m--margin-top-40">
+																<div class="tab-pane active" id="m_form_confirm_1" role="tabpanel">
+																	<div class="row">				
+																		<div class="col-md-6">
+																			<div class="form-group">
+																				<label for="recipient-name" class="form-control-label">
+																					วันเกิด :
+																				</label>
+																				<div class="input-group date">
+																					<input class="form-control m-input" id="m_datepicker_1" placeholder="เลือกวันเกิด" readonly="" type="text">
+																					<div class="input-group-append">
+																						<span class="input-group-text">
+																							<i class="la la-calendar-check-o"></i>
+																						</span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>	
+																		<div class="col-md-6">
+																			<div class="form-group">
+																				<label for="recipient-name" class="form-control-label">
+																					เลขที่บัตรประชาชน :
+																				</label>
+																				<input type="text" class="form-control" placeholder="กรุณากรอกเลขที่บัตรประชาชน">
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+																<div class="tab-pane" id="m_form_confirm_2" role="tabpanel">
+																	<div class="row">				
+																		<div class="col-md-3">
+																			<div class="form-group">
+																				<label for="recipient-name" class="form-control-label">
+																					วันก่อตั้ง :
+																				</label>
+																				<div class="input-group date">
+																					<input class="form-control m-input" id="m_datepicker_1" placeholder="เลือกวันก่อตั้ง" readonly="" type="text">
+																					<div class="input-group-append">
+																						<span class="input-group-text">
+																							<i class="la la-calendar-check-o"></i>
+																						</span>
+																					</div>
+																				</div>
+																			</div>
+																		</div>	
+																		<div class="col-md-3">
+																			<div class="form-group">
+																				<label for="recipient-name" class="form-control-label">
+																					เลขที่จดทะเบียน :
+																				</label>
+																				<input type="text" class="form-control" placeholder="กรุณากรอกเลขที่จดทะเบียน">
+																			</div>
+																		</div>	
+																		<div class="col-md-3">
+																			<div class="form-group">
+																				<label for="recipient-name" class="form-control-label">
+																					เลขประจำตัวผู้เสียภาษี :
+																				</label>
+																				<input type="text" class="form-control" placeholder="กรุณากรอกเลขประจำตัวผู้เสียภาษี">
+																			</div>
+																		</div>								
+																		<div class="col-md-3">
+																			<div class="form-group">
+																				<label for="recipient-name" class="form-control-label">
+																					ทุนจดทะเบียน :
+																				</label>
+																				<input type="text" class="form-control" placeholder="กรุณากรอกทุนจดทะเบียน">
+																			</div>
+																		</div>	
+																	</div>
+																</div>
+															</div>
+															<!--end::Section-->
+														</div>
+													</div>
+											</fieldset>
+										</div>
+									</div>
+							</div>
+							<!--end: Form Wizard Step 1-->                     
+							<!--begin: Form Wizard Step 2-->
+							<div class="m-wizard__form-step" id="m_wizard_form_step_2">
+								<div class="row">
+										<div class="col-md-12">
+											<fieldset>
+												<legend>&nbsp;&nbsp;&nbsp;ข้อมูลการเงิน&nbsp;&nbsp;&nbsp;</legend>
+												<div class="row">
+													<div class="col-md-4">
+														<div class="form-group m-form__group">
+															<label for="exampleSelect1">
+																	ธนาคารผู้ขาย
+															</label>
+															<select class="form-control m-input" >
+																<option>
+																		ธนาคารผู้ขาย
+																</option>
+															</select>
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																เลขที่บัญชีผู้ขาย :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกเลขที่บัญชีผู้ขาย">
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																สาขาธนาคาร :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกสาขาธนาคาร">
+														</div>
+													</div>
+												</div>
+											</fieldset>
+											<br/>
+											<fieldset>
+												<legend>&nbsp;&nbsp;&nbsp;เครดิต&nbsp;&nbsp;&nbsp;</legend>
+												<div class="row">
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																วงเงินเครดิต :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกวงเงินเครดิต">
+														</div>
+													</div>
+													<div class="col-md-4">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																เครดิต (วัน) :
+															</label>
+															<input type="text" class="form-control" placeholder="กรุณากรอกเครดิต (วัน)">
+														</div>
+													</div>
+												</div>
+											</fieldset>
+											<br/>
+											<fieldset>
+												<legend>&nbsp;&nbsp;&nbsp;เงื่อนไขการรับวางบิล&nbsp;&nbsp;&nbsp;</legend>
+												<div class="row">
+													<div class="col-md-4">
+														<div class="form-group m-form__group">
+															<label for="exampleSelect1">
+																เงื่อนไขการรับวางบิล
+															</label>
+															<select class="form-control m-input" id="select_bill" >
+																<option value="1">รับวางบิลทุกวัน</option>
+																<option value="2">ระบุวันรับวางบิล</option>
+																<option value="3">ระบุวันที่รับวางบิล</option>
+																<option value="4">ระบุสัปดาห์ที่รับวางบิล</option>
+																<option value="5">ระบุทุกวัน...ของสัปดาห์ที่...รับวางบิล</option>
+																<option value="6">ไม่ระบุเงื่อนไข</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<br/>
+												<!--begin: Bill -->
+												<!-- 2 -->
+												<div class="m-section__content" id="div_bill_2" style="display: none;" >
+														<div class="m-demo" data-code-html="true" data-code-js="false" data-code-preview="true">
+															<div class="m-demo__preview">
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				ทุกวัน
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				จันทร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				อังคาร
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				พุธ
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				พฤหัสบดี
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				ศุกร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				เสาร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				อาทิตย์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<!-- 3 -->
+
+													<div class="m-section__content" id="div_bill_3" style="display: none;" >
+														<div class="m-demo" data-code-html="true" data-code-js="false" data-code-preview="true">
+															<div class="m-demo__preview">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				1
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				2
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				3
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				4
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				5
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				6
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				7
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				8
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				9
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				10
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				11
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				12
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				13
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				14
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				15
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				16
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				17
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				18
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				19
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				20
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				21
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				22
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				23
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				24
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				25
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				26
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				27
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				28
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				29
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				30
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				31
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<!-- 4 -->
+													<div class="m-section__content" id="div_bill_4" style="display: none;">
+														<div class="m-demo" data-code-html="true" data-code-js="false" data-code-preview="true">
+															<div class="m-demo__preview">
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 1
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 2
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 3
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 4
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- 5 -->
+													<div class="m-section__content" id="div_bill_5" style="display: none;">
+														<div class="m-demo" data-code-html="true" data-code-js="false" data-code-preview="true">
+															<div class="m-demo__preview">
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				ทุกวัน
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				จันทร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				อังคาร
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				พุธ
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				พฤหัสบดี
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				ศุกร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				เสาร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				อาทิตย์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 1
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 2
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 3
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 4
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												
+												<!--end: Bill -->
+												
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																บันทึกเพิ่มเติม :
+															</label>
+															<textarea class="form-control m-input" id="exampleTextarea" rows="3"></textarea>
+														</div>
+													</div>
+												</div>
+											</fieldset>
+											<br/>
+											<fieldset>
+												<legend>&nbsp;&nbsp;&nbsp;เงื่อนไขการจ่ายเงิน&nbsp;&nbsp;&nbsp;</legend>
+												<div class="row">
+													<div class="col-md-4">
+														<div class="form-group m-form__group">
+															<label for="exampleSelect1">
+																เงื่อนไขการจ่ายเงิน
+															</label>
+															<select class="form-control m-input" id="select_payment" >
+																<option value="1">จ่ายเงินทุกวัน</option>
+																<option value="2">ระบุวันจ่ายเงิน</option>
+																<option value="3">ระบุวันที่จ่ายเงิน</option>
+																<option value="4">ระบุสัปดาห์ที่รับวางบิล</option>
+																<option value="5">ไม่ระบุเงื่อนไข</option>
+																<option value="6">ไม่ระบุเงื่อนไข</option>
+															</select>
+														</div>
+													</div>
+												</div><br/>
+												<!--begin: Payment -->
+												<!-- 2 -->
+												<div class="m-section__content" id="div_payment_2" style="display: none;">
+														<div class="m-demo" data-code-html="true" data-code-js="false" data-code-preview="true">
+															<div class="m-demo__preview">
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				ทุกวัน
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				จันทร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				อังคาร
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				พุธ
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				พฤหัสบดี
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				ศุกร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				เสาร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				อาทิตย์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<!-- 3 -->
+
+													<div class="m-section__content" id="div_payment_3" style="display: none;">
+														<div class="m-demo" data-code-html="true" data-code-js="false" data-code-preview="true">
+															<div class="m-demo__preview">
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				1
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				2
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				3
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				4
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				5
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				6
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				7
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				8
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				9
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				10
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				11
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				12
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				13
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				14
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				15
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				16
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				17
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				18
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				19
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				20
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				21
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				22
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				23
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				24
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				25
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				26
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				27
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				28
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				29
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				30
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-1">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				31
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+
+													<!-- 4 -->
+													<div class="m-section__content" id="div_payment_4" style="display: none;">
+														<div class="m-demo" data-code-html="true" data-code-js="false" data-code-preview="true">
+															<div class="m-demo__preview">
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 1
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 2
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 3
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 4
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- 5 -->
+													<div class="m-section__content" id="div_payment_5" style="display: none;">
+														<div class="m-demo" data-code-html="true" data-code-js="false" data-code-preview="true">
+															<div class="m-demo__preview">
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				ทุกวัน
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				จันทร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				อังคาร
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				พุธ
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				พฤหัสบดี
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				ศุกร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				เสาร์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				อาทิตย์
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 1
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 2
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 3
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																	<div class="col-md-3">
+																		<div class="m-checkbox-list form-group">
+																			<label class="m-checkbox">
+																				<input type="checkbox">
+																				สัปดาห์ที่ 4
+																				<span></span>
+																			</label>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												<!--end: Payment -->
+												<br/>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label for="recipient-name" class="form-control-label">
+																บันทึกเพิ่มเติม :
+															</label>
+															<textarea class="form-control m-input" id="exampleTextarea" rows="3"></textarea>
+														</div>
+													</div>
+												</div>
+											</fieldset>
+										</div>
+									</div>
+							</div>
+							<!--end: Form Wizard Step 2-->                      
+							<!--begin: Form Wizard Step 3-->
+							<div class="m-wizard__form-step" id="m_wizard_form_step_3">
+								<div class="row">
+									<div class="col-md-12">
+										<fieldset>
+											<legend>&nbsp;&nbsp;&nbsp;ผู้ติดต่อ&nbsp;&nbsp;&nbsp;</legend>
+											<div class="row">
+												<div class="col-md-12">
+														<div id="m_repeater_2" class="mt-3">
+																<div class="table-responsive">
+																	<table class="table table-bordered" data-repeater-list="">
+																		<thead class="thead-bg">
+																			<tr>
+																				<th class="text-center" width="160">
+																					ชื่อผู้ติดต่อ
+																				</th>
+																				<th class="text-center" width="180">
+																					ตำแหน่ง
+																				</th>
+																				<th class="text-center" width="190">
+																					โทรศัพท์
+																				</th>
+																				<th class="text-center">
+																					E-Mail
+																				</th>
+																				<th class="text-center">
+																					Line
+																				</th>
+																				<th class="text-center">
+																					หน้าที่
+																				</th>
+																				<th class="text-center">
+																					รายละเอียด
+																				</th>
+																				<th>
+																				</th>
+																			</tr>
+																		</thead>
+																		<tbody>
+																			<tr data-repeater-item>
+																				<td class="text-center">
+																					<input type="text" class="form-control" placeholder="ชื่อผู้ติดต่อ">
+																				</td>
+																				<td class="text-center">
+																					<input type="text" class="form-control" placeholder="ตำแหน่ง">
+																				</td>
+																				<td class="text-center">
+																					<input type="text" class="form-control" placeholder="โทรศัพท์">
+																				</td>
+																				<td class="text-center">
+																					<input type="text" class="form-control" placeholder="E-Mail">
+																				</td>
+																				<td class="text-center">
+																					<input type="text" class="form-control" placeholder="Line">
+																				</td>
+																				<td class="text-center">
+																					<input type="text" class="form-control" placeholder="หน้าที่">
+																				</td>
+																				<td class="text-center">
+																					<input type="text" class="form-control" placeholder="รายละเอียด">
+																				</td>
+																				<td class="text-center">
+																					<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+																						<i class="la la-trash" style="color:#ffffff;"></i>
+																					</a>
+																				</td>
+																			</tr>
+																		</tbody>
+																	</table>
+																</div>
+																<div class="m-form__group form-group row">
+																	<div class="col-lg-12 col-xs-12">
+																		<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+																			<span>
+																				<i class="la la-plus"></i>
+																				<span>
+																					เพิ่ม
+																				</span>
+																			</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+							<!--end: Form Wizard Step 3-->
+						</div>
+						<!--end: Form Body -->                 
+						<!--begin: Form Actions -->
+						<div class="m-portlet__foot m-portlet__foot--fit m--margin-top-40">
+							<div class="m-form__actions">
+								<div class="row">
+									<div class="col-lg-2"></div>
+									<div class="col-lg-4 m--align-left">
+										<a href="#" class="btn btn-secondary m-btn m-btn--custom m-btn--icon" data-wizard-action="prev">
+											<span>
+												<i class="la la-arrow-left"></i>
+												&nbsp;&nbsp;
+												<span>
+													Back
+												</span>
+											</span>
+										</a>
+									</div>
+									<div class="col-lg-4 m--align-right">
+										<a href="#" class="btn btn-primary m-btn m-btn--custom m-btn--icon" data-wizard-action="submit">
+											<span>
+												<i class="la la-check"></i>
+												&nbsp;&nbsp;
+												<span>
+													Submit
+												</span>
+											</span>
+										</a>
+										<a href="#" class="btn btn-warning m-btn m-btn--custom m-btn--icon" data-wizard-action="next">
+											<span>
+												<span>
+													Save & Continue
+												</span>
+												&nbsp;&nbsp;
+												<i class="la la-arrow-right"></i>
+											</span>
+										</a>
+									</div>
+									<div class="col-lg-2"></div>
+								</div>
+							</div>
+						</div>
+						<!--end: Form Actions -->
+					</form>
+				</div>
+				<!--end: Form Wizard Form-->
+			</div>
+			<!--end: Form Wizard-->
+		</div>
+		<!--End::Main Portlet-->
+	</div>

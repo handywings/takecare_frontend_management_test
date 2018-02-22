@@ -1,0 +1,460 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				กำหนดประเภทการลา
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/setup" class="m-nav__link">
+						<span class="m-nav__link-text">
+							ตั้งค่าเริ่มต้น
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/setup/hr" class="m-nav__link">
+						<span class="m-nav__link-text">
+							HR
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<span class="m-nav__link-text">
+						กำหนดประเภทการลา
+					</span>
+				</li>
+			</ul>
+		</div>
+		<span data-toggle="m-tooltip" title="เพิ่มประเภทการลา" data-placement="left">
+			<a class="btn btn-success m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#add_modal">
+				<i class="la la-plus"></i>
+			</a>
+		</span>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__head">
+			<div class="m-portlet__head-caption">
+				<div class="m-portlet__head-title">
+					<h3 class="m-portlet__head-text">
+						ประเภทการลา
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="m-portlet__body">
+			<!--begin: Datatable -->
+			<table class="m-datatable" width="100%">
+				<thead>
+					<tr>
+						<th title="Field #1">
+							ลำดับ
+						</th>
+						<th title="Field #2">
+							รหัสประเภทการลา
+						</th>
+						<th title="Field #2">
+							ชื่อประเภทการลา
+						</th>
+						<th title="Field #3">
+							ชื่อประเภทการลา (Eng)
+						</th>
+						<th title="Field #5">
+							จำนวนวันที่อนุญาต
+						</th>
+						<th title="Field #5">
+							รายละเอียด
+						</th>
+						<th title="Field #3">
+							สถานะใช้งาน
+						</th>
+						<th title="Field #6">
+
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>L-00001</td>
+						<td>ลาป่วย</td>
+						<td>Leave Sick</td>
+						<td>30 วัน</td>
+						<td>มาตรฐานบริษัทฯ</td>
+						<td>
+							<p class="m-badge m-badge--success"></p> เปิด
+						</td>
+						<td>
+							<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+							<a data-toggle="modal" data-target="#edit_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-warning m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-edit"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>L-00002</td>
+						<td>ลากิจ</td>
+						<td>Affaire</td>
+						<td>7 วัน</td>
+						<td>มาตรฐานบริษัทฯ</td>
+						<td>
+							<p class="m-badge m-badge--success"></p> เปิด
+						</td>
+						<td>
+							<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+							<a data-toggle="modal" data-target="#edit_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-warning m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-edit"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>L-00003</td>
+						<td>ลาพักร้อน</td>
+						<td>Vacation</td>
+						<td>7 วัน</td>
+						<td>สำหรับพนักงานที่อายุ 1 ปีขึ้นไป</td>
+						<td>
+							<p class="m-badge m-badge--success"></p> เปิด
+						</td>
+						<td>
+							<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+							<a data-toggle="modal" data-target="#edit_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-warning m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-edit"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>L-00004</td>
+						<td>ลาคลอด</td>
+						<td>Maternity Leave</td>
+						<td>90 วัน</td>
+						<td>มาตรฐานบริษัทฯ</td>
+						<td>
+							<p class="m-badge m-badge--success"></p> เปิด
+						</td>
+						<td>
+							<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+							<a data-toggle="modal" data-target="#edit_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-warning m-btn--icon m-btn--icon-only m-btn--pill"
+							 title="Edit details">
+								<i class="la la-edit"></i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--end: Datatable -->
+		</div>
+	</div>
+
+
+	<!--begin::Add Modal-->
+	<div class="modal fade" id="add_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						<i class="la la-plus"></i> เพิ่มประเภทการลา
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อประเภทการลา :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อประเภทการลา">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อประเภทการลา (Eng) :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อประเภทการลา (Eng)">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										จำนวนวันที่อนุญาต :
+									</label>
+									<div class="input-group">
+										<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+										<div class="input-group-append">
+											<span class="input-group-text" id="basic-addon2">
+												วัน
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="message-text" class="form-control-label">
+										รายละเอียด :
+									</label>
+									<textarea class="form-control" id="message-text" placeholder="กรุณากรอกรายละเอียด"></textarea>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success">
+						บันทึก
+					</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						ปิด
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end:: Add Modal-->
+
+	<!--begin::Edit Modal-->
+	<div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						<i class="la la-edit"></i> แก้ไขประเภทการลา
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										รหัสประเภทการลา :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกรหัสประเภทการลา" value="L-00001">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อประเภทการลา :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อประเภทการลา" value="การลาประจำ">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อประเภทการลา (Eng) :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อประเภทการลา (Eng)" value="Monthly">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										จำนวนวันที่อนุญาต :
+									</label>
+									<div class="input-group">
+										<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+										<div class="input-group-append">
+											<span class="input-group-text" id="basic-addon2">
+												วัน
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="message-text" class="form-control-label">
+										รายละเอียด :
+									</label>
+									<textarea class="form-control" id="message-text" placeholder="กรุณากรอกรายละเอียด">ประเภทการลารายเดือน</textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="message-text" class="form-control-label">
+										สถานะการใช้งาน :
+									</label>
+								</div>
+							</div>
+							<div class="col-md-8">
+								<span class="m-switch m-switch--outline m-switch--icon m-switch--success">
+									<label>
+										<input checked="checked" name="" type="checkbox">
+										<span></span>
+									</label>
+								</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success">
+						บันทึก
+					</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						ปิด
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end:: Edit Modal-->
+
+	<!--begin::View Modal-->
+	<div class="modal fade" id="view_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						รายละเอียดประเภทการลา
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										รหัสประเภทการลา :
+									</label>
+									<br>L-00001</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อประเภทการลา :
+									</label>
+									<br>ลาป่วย</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อประเภทการลา (Eng) :
+									</label>
+									<br>Leave Sick</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										จำนวนวันที่อนุญาต :
+									</label>
+									<br>30 วัน</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										สถานะการใช้งาน :
+									</label>
+									<br>
+									<p class="m-badge m-badge--success"></p> เปิดใช้งาน</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ผู้บันทึกข้อมูล :
+									</label>
+									<br>ณัฐพล ชัยสุวรรณ</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										บันทึกเมื่อ :
+									</label>
+									<br>มาตรฐานบริษัทฯ</div>
+							</div>
+							<div class="col-md-8">
+								<div class="form-group">
+									<label for="message-text" class="form-control-label">
+										รายละเอียด :
+									</label>
+									<br>ผู้บริการสูงสุด </div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						ปิด
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end:: View Modal-->
+
+</div>

@@ -1,0 +1,246 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				ยื่นคำร้องอนุมัติลางาน
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/hr" class="m-nav__link">
+						<span class="m-nav__link-text">
+							ระบบบริหารทรัพยากรบุคคล
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/hr" class="m-nav__link">
+						<span class="m-nav__link-text">
+							การลา
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<span class="m-nav__link-text">
+						ยื่นคำร้องอนุมัติลางาน
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="m-portlet" style="margin-bottom: 1.2rem;">
+				<div class="m-portlet__body">
+					<div class="row">
+						<div class="col-md-5">
+							<div class="m-card-user m-card-user--lg">
+								<div>
+									<img alt="photo" class="m--img-rounded m--marginless mCS_img_loaded" src="./assets/app/media/img/users/100_11.jpg"> </div>
+								<div class="m-card-user__details">
+									<span class="m-card-user__name">กุลนิษฐ์ สุวรรณสมบูณ์</span>
+									<span class="m-card-user__email">Member No. : M0000001</span>
+									<br>
+									<span class="m-card-user__email">ประเภทลูกค้า : King</span>
+									<br>
+									<span class="m-card-user__email">ระดับลูกค้า :
+										<small class="m--font-warning">
+											<i class="la la-star"></i>
+											<i class="la la-star"></i>
+											<i class="la la-star"></i>
+											<i class="la la-star"></i>
+											<i class="la la-star"></i>
+										</small>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="m-stack m-stack--ver m-stack--general m-stack--demo">
+										<div class="m-stack__item text-center">
+											<p>ใช้บริการทั้งหมด</p>
+											10 ครั้ง
+										</div>
+										<div class="m-stack__item text-center">
+											<p>รอนัดหมาย</p>
+											3 รายการ
+										</div>
+										<div class="m-stack__item text-center">
+											<p>ยอดเงินรับชำระ</p>
+											35,000 ฿
+										</div>
+										<div class="m-stack__item text-center">
+											<p>Member Card</p>
+											35,000 ฿
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-6 text-center">
+									ใช้บริการครั้งแรก : 10 ม.ค. 2560 (10:00 น.)
+								</div>
+								<div class="col-md-6 text-center">
+									ใช้บริการครั้งล่าสุด : 10 ม.ค. 2561 (10:00 น.)
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-12"></div>
+					</div>
+				</div>
+			</div>
+			<div class="m-portlet">
+				<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed">
+					<div class="m-portlet__body">
+						<div class="form-group m-form__group row">
+							<div class="col-md-12">
+								<fieldset>
+									<legend>&nbsp;&nbsp;&nbsp;ข้อมูลแบบคำร้อง&nbsp;&nbsp;&nbsp;</legend>
+									<div class="row mt-2">
+										<div class="col-md-12">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															ประเภทการลา :
+														</label>
+														<select class="form-control m-select2 m_select2_1" name="param">
+															<option>
+																ลาป่วย (Leave Sick)
+															</option>
+															<option>
+																ลากิจ (Affaire)
+															</option>
+															<option>
+																ลาพักร้อน (Vacation)
+															</option>
+															<option>
+																ลาคลอด (Maternity Leave)
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<label for="recipient-name" class="form-control-label">
+														จำนวนวันลาคงเหลือ :
+													</label>
+													<div class="m-radio-inline">10 วัน</div>
+												</div>
+												<div class="col-md-3">
+													<label for="recipient-name" class="form-control-label">
+														ระดับเอกสาร :
+													</label>
+													<div class="m-radio-inline">
+														<label class="m-radio m-radio--success m-radio--solid">
+															<input type="radio" name="example_1" value="1" checked> ปกติ
+															<span></span>
+														</label>
+														<label class="m-radio m-radio--success m-radio--solid">
+															<input type="radio" name="example_1" value="1"> เร่งด่วน
+															<span></span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															เหตุผลการลา
+														</label>
+														<textarea class="form-control" style="height: 80px;"></textarea>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-4">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															วันที่ต้องการลา :
+														</label>
+														<div class="input-daterange input-group" id="m_datepicker_5">
+																<input type="text" class="form-control m-input" name="start" placeholder="วันเริ่มต้น"/>
+																<div class="input-group-append">
+																	<span class="input-group-text">
+																		ถึง
+																	</span>
+																</div>
+																<input type="text" class="form-control" name="end" placeholder="วันสิ้นสุด"/>
+															</div>
+													</div>
+												</div>
+												<div class="col-md-4 mt-4">
+													<div class="m-checkbox-inline">
+														<label class="m-checkbox m-checkbox--success m-checkbox--solid">
+															<input type="checkbox" name="example_3" value="1"> ระบุช่วงเวลาที่ต้องการลา
+															<span></span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+						<div class="form-group m-form__group row">
+							<div class="col-md-12">
+								<fieldset>
+									<legend>&nbsp;&nbsp;&nbsp;ไฟล์เอกสารประกอบ / ใบรับรองแพทย์ (แนะนำเป็นรูปภาพหรือไฟล์ PDF)&nbsp;&nbsp;&nbsp;</legend>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="m-dropzone dropzone" action="inc/api/dropzone/upload.php" id="m-dropzone-one">
+												<div class="m-dropzone__msg dz-message needsclick">
+													<h3 class="m-dropzone__msg-title">
+														คลิกเพื่ออัพโหลดรูปภาพสินค้า
+													</h3>
+												</div>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+
+					</div>
+					<div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+						<div class="m-form__actions m-form__actions--solid">
+							<div class="row">
+								<div class="col-lg-12 m--align-center">
+									<button class="btn btn-primary" type="reset">
+										บันทึก
+									</button>
+									<button class="btn btn-secondary" type="reset">
+										ยกเลิก
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,605 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+					รายการตรวจนับสินค้า
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/inventory" class="m-nav__link">
+						<span class="m-nav__link-text">
+							ระบบคลังสินค้า
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<span class="m-nav__link-text">
+						รายการตรวจนับสินค้า
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__head">
+			<div class="m-portlet__head-caption">
+				<div class="m-portlet__head-title">
+					<h3 class="m-portlet__head-text">
+						ค้นหารายการเบิก
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="m-portlet__body">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							คำค้น/เลขที่เอกสาร
+						</label>
+						<select class="form-control m-select2 m_select2_1" name="param">
+							<option>
+								-- ทั้งหมด --
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							วันที่ตรวจนับ
+						</label>
+						<input class="form-control" name="end" type="text" id="dateend">
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							ผู้ตรวจนับสินค้า
+						</label>
+						<select class="form-control m-select2 m_select2_1" name="param">
+							<option>
+								-- ทั้งหมด --
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<label for="recipient-name" class="form-control-label">
+							สถานะเอกสาร
+						</label>
+						<select class="form-control" name="parsam">
+							<option value="">-- ทั้งหมด --</option>
+							<option value="">แบบร่าง</option>
+							<option value="">รออนุมัติ</option>
+							<option value="">อนุมัติแล้ว</option>
+							<option value="">ไม่อนุมัติ</option>
+							<option value="">ยกเลิก</option>
+						</select>
+					</div>
+				</div>
+			</div> 
+
+			<div class="row">
+				<div class="col-md-3">
+					Multi select คลังสินค้าและที่จัดเก็บ
+				</div>
+				<div class="col-md-3">
+					Multi select กลุ่ม/หมวดสินค้า
+				</div>
+				<div class="col-md-3">
+					Multi select ยี่ห้อ/รุ่นสินค้า
+				</div>
+				<div class="col-md-3">
+					Multi select สถานะสินค้า
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<button class="btn btn-info" type="button">
+						<i class="la la-search"></i> ค้นหารายการเอกสารตามเงื่อนไข
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__head">
+			<div class="m-portlet__head-caption">
+				<div class="m-portlet__head-title">
+					<h3 class="m-portlet__head-text">
+						รายการเอกสาร
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="m-portlet__body">
+			<div class="m-form__group form-group row">
+				<div class="col-lg-12 col-xs-12">
+					<a routerLink="new">
+						<div class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right" data-repeater-create="">
+							<span>
+								<i class="la la-plus"></i>
+								<span>
+									บันทึกใบตรวจนับสินค้า
+								</span>
+							</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="form-group m-form__group row">
+				<div class="col-md-12">
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#m_tabs_1_1">
+								ทั้งหมด
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#m_tabs_1_2">
+								แบบร่าง
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#m_tabs_1_3">
+								รอตรวจสอบ
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#m_tabs_1_4">
+								ตรวจสอบแล้ว
+							</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active" id="m_tabs_1_1" role="tabpanel">
+							 <!--begin: Datatable -->
+							<table class="m-datatable-tab1" width="100%">
+								<thead>
+									<tr>
+										<th title="Field #1">
+											เลขเอกสาร
+										</th>
+										<th title="Field #2">
+											วันที่เอกสาร
+										</th>
+										<th title="Field #3">
+											วันที่ตรวจนับ
+										</th>
+										<th title="Field #4">
+											ผู้ตรวจนับ
+										</th>
+										<th title="Field #5">
+											พื้นที่ตรวจนับ
+										</th>
+										<th title="Field #6">
+											ต้นทุนเบิก(บาท)
+										</th>
+										<th title="Field #7">
+											หมายเหตุ
+										</th>
+										<th title="Field #8">
+											
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายพิสิษฐ์ งามการ
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายธเนศ ล้อมเขื่อน
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายธนารัตน์ สุวรรณนันท์
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--end: Datatable -->
+						</div>
+						<div class="tab-pane" id="m_tabs_1_2" role="tabpanel">
+							 <!--begin: Datatable -->
+							<table class="m-datatable-tab2" width="100%">
+								<thead>
+									<tr>
+										<th title="Field #1">
+											เลขเอกสาร
+										</th>
+										<th title="Field #2">
+											วันที่เอกสาร
+										</th>
+										<th title="Field #3">
+											วันที่ตรวจนับ
+										</th>
+										<th title="Field #4">
+											ผู้ตรวจนับ
+										</th>
+										<th title="Field #5">
+											พื้นที่ตรวจนับ
+										</th>
+										<th title="Field #6">
+											ต้นทุนเบิก(บาท)
+										</th>
+										<th title="Field #7">
+											หมายเหตุ
+										</th>
+										<th title="Field #8">
+											
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายพิสิษฐ์ งามการ
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายธเนศ ล้อมเขื่อน
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายธนารัตน์ สุวรรณนันท์
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--end: Datatable -->
+						</div>
+						<div class="tab-pane" id="m_tabs_1_3" role="tabpanel">
+							 <!--begin: Datatable -->
+							<table class="m-datatable-tab3" width="100%">
+								<thead>
+									<tr>
+										<th title="Field #1">
+											เลขเอกสาร
+										</th>
+										<th title="Field #2">
+											วันที่เอกสาร
+										</th>
+										<th title="Field #3">
+											วันที่ตรวจนับ
+										</th>
+										<th title="Field #4">
+											ผู้ตรวจนับ
+										</th>
+										<th title="Field #5">
+											พื้นที่ตรวจนับ
+										</th>
+										<th title="Field #6">
+											ต้นทุนเบิก(บาท)
+										</th>
+										<th title="Field #7">
+											หมายเหตุ
+										</th>
+										<th title="Field #8">
+											
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายพิสิษฐ์ งามการ
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายธเนศ ล้อมเขื่อน
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายธนารัตน์ สุวรรณนันท์
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--end: Datatable -->
+						</div>
+						<div class="tab-pane" id="m_tabs_1_4" role="tabpanel">
+							 <!--begin: Datatable -->
+							<table class="m-datatable-tab4" width="100%">
+								<thead>
+									<tr>
+										<th title="Field #1">
+											เลขเอกสาร
+										</th>
+										<th title="Field #2">
+											วันที่เอกสาร
+										</th>
+										<th title="Field #3">
+											วันที่ตรวจนับ
+										</th>
+										<th title="Field #4">
+											ผู้ตรวจนับ
+										</th>
+										<th title="Field #5">
+											พื้นที่ตรวจนับ
+										</th>
+										<th title="Field #6">
+											ต้นทุนเบิก(บาท)
+										</th>
+										<th title="Field #7">
+											หมายเหตุ
+										</th>
+										<th title="Field #8">
+											
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายพิสิษฐ์ งามการ
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายธเนศ ล้อมเขื่อน
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								
+									<tr>
+										<td><a href="">XXXXX</a></td>
+										<td>XX-XXXX-XXXX</td>
+										<td>XXXXXXXX</td>
+										<td>
+											นายธนารัตน์ สุวรรณนันท์
+											<br/> it support
+											<br/> it handywing co.,Ltd
+										</td>
+										<td>
+											คลัง A(A01, A02) <br />
+											คลัง B(ZONE C)
+										</td>
+										<td>XXXXXXXXXXXXXXXXXXXX</td>
+										<td>
+											XXXXXX
+										</td>
+										<td>
+											<a routerLink="detail" class="m-portlet__nav-link btn m-btn m-btn--hover-info m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+												<i class="la la-search"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!--end: Datatable -->
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,2207 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				เพิ่มสวัสดิการ
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+						/
+					</li>
+					<li class="m-nav__item">
+						<a routerLink="/setup" class="m-nav__link">
+							<span class="m-nav__link-text">
+								ตั้งค่าเริ่มต้น
+							</span>
+						</a>
+					</li>
+					<li class="m-nav__separator">
+						/
+					</li>
+					<li class="m-nav__item">
+						<a routerLink="/setup/hr" class="m-nav__link">
+							<span class="m-nav__link-text">
+								HR
+							</span>
+						</a>
+					</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/setup/hr/welfare/welfare" routerLinkActive="active" class="m-nav__link">
+						<span class="m-nav__link-text">
+							กำหนดสวัสดิการ
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+						<span class="m-nav__link-text">
+							เพิ่มสวัสดิการ
+						</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__body">
+			<div class="row">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>&nbsp;&nbsp;&nbsp;ข้อมูลสวัสดิการ&nbsp;&nbsp;&nbsp;</legend>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										รหัสประเภทสวัสดิการ :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกรหัสประเภทสวัสดิการ">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อประเภทสวัสดิการ :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อประเภทสวัสดิการ">
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อประเภทสวัสดิการ (Eng) :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อประเภทสวัสดิการ (Eng)">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ประเภทสวัสดิการ :
+									</label>
+									<select class="form-control m-select2" id="m_select2_1" name="param">
+										<option>
+											เงินกู้ยืม
+										</option>
+										<option>
+											เงินทดแทน
+										</option>
+										<option>
+											เงินค่ารักษาพยาบาล
+										</option>
+										<option>
+											เงินค่าคลอดบุตร
+										</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										วันเริ่มต้น :
+									</label>
+									<div class="input-group date">
+										<input class="form-control m-input" id="m_datepicker_1" placeholder="เลือกวันเริ่มต้น" readonly="" type="text">
+										<div class="input-group-append">
+											<span class="input-group-text">
+												<i class="la la-calendar-check-o"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										วันสิ้นสุด :
+									</label>
+									<div class="input-group date">
+										<input class="form-control m-input" id="m_datepicker_1" placeholder="เลือกวันสิ้นสุด" readonly="" type="text">
+										<div class="input-group-append">
+											<span class="input-group-text">
+												<i class="la la-calendar-check-o"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="message-text" class="form-control-label">
+										รายละเอียดสวัสดิการ :
+									</label>
+									<textarea class="form-control" id="message-text" placeholder="กรุณากรอกรายละเอียด"></textarea>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>&nbsp;&nbsp;&nbsp;รูปแบบสวัสดิการ&nbsp;&nbsp;&nbsp;</legend>
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="m-radio-inline">
+									<label class="m-radio m-radio--success m-radio--solid" (click)="checkCondition(false,1)">
+										<input type="radio" name="example_3" value="1" checked> ค่ารักษาพยาบาล
+										<span></span>
+									</label>
+									<label class="m-radio m-radio--success m-radio--solid" (click)="checkCondition(false,2)">
+										<input type="radio" name="example_3" value="2"> กู้ยืม
+										<span></span>
+									</label>
+									<label class="m-radio m-radio--success m-radio--solid" (click)="checkCondition(false,3)">
+										<input type="radio" name="example_3" value="3"> กองทุน
+										<span></span>
+									</label>
+									<label class="m-radio m-radio--success m-radio--solid" (click)="checkCondition(false,4)">
+										<input type="radio" name="example_3" value="3"> เงินทดแทน
+										<span></span>
+									</label>
+									<label class="m-radio m-radio--success m-radio--solid" (click)="checkCondition(false,5)">
+										<input type="radio" name="example_3" value="3"> ค่าการศึกษาบุตร
+										<span></span>
+									</label>
+									<label class="m-radio m-radio--success m-radio--solid" (click)="checkCondition(false,6)">
+										<input type="radio" name="example_3" value="3"> สินทรัพย์
+										<span></span>
+									</label>
+									<label class="m-radio m-radio--success m-radio--solid" (click)="checkCondition(false,7)">
+										<input type="radio" name="example_3" value="3"> สวัสดิการอื่นๆ
+										<span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<hr>
+							</div>
+						</div>
+
+						<div *ngIf="welfareTypeCondition == '1'">
+							<div class="row mt-2">
+								<div class="col-md-12">กรณีเลือกประเภท ค่ารักษาพยาบาล จะต้องระบุเงื่อนไขตามรายละเอียดด้านล่าง
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-12">
+								</div>
+							</div>
+							<div>
+								<div id="m_repeater_2" class="mt-3">
+									<div class="table-responsive">
+										<table class="table table-bordered" data-repeater-list="">
+											<thead class="thead-bg">
+												<tr>
+													<th class="text-center" width="160">
+														มีความสัมพันธ์เป็น
+													</th>
+													<th class="text-center" width="180">
+														ค่ารักษาพยาบาล/ครั้ง
+													</th>
+													<th class="text-center" width="190">
+														ค่ารักษาพยาบาลรวม/ปี
+													</th>
+													<th class="text-center">
+														รายละเอียด
+													</th>
+													<th class="text-center">
+														เงื่อนไข
+													</th>
+													<th>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-repeater-item>
+													<td class="text-center">
+														<input type="text" class="form-control" placeholder="Ex. มารดา">
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 1000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 12000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<input type="text" class="form-control" placeholder="Ex. สำหรับมารดาของพนักงาน">
+													</td>
+													<td class="text-center">
+														<a href="#" data-toggle="modal" data-target="#m_modal_1">เพิ่ม</a>
+													</td>
+													<td class="text-center">
+														<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+															<i class="la la-trash" style="color:#ffffff;"></i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="m-form__group form-group row">
+										<div class="col-lg-12 col-xs-12">
+											<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+												<span>
+													<i class="la la-plus"></i>
+													<span>
+														เพิ่ม
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--begin::Modal-->
+							<div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-llg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">
+												เงื่อนไข
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">
+													&times;
+												</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div id="m_repeater_2">
+												<div class="table-responsive">
+													<table class="table table-bordered" data-repeater-list="">
+														<thead class="thead-bg">
+															<tr>
+																<th class="text-center" style="width:220px">
+																	หน่วยงาน
+																</th>
+																<th class="text-center" style="width:220px">
+																	ตำแหน่ง
+																</th>
+																<th class="text-center" style="width:190px">
+																	ระดับ
+																</th>
+																<th class="text-center" style="width:250px">
+																	เงื่อนไข
+																</th>
+																<th class="text-center" style="width:160px">
+																	ช่วงอายุงาน
+																</th>
+																<th class="text-center" style="width:220px">
+																	วงเงินต่อครั้ง
+																</th>
+																<th class="text-center" style="width:150px">
+																	วงเงินรวมต่อปี
+																</th>
+																<th class="text-center" style="width:200px">
+																	รายละเอียด
+																</th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr data-repeater-item>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			บริหารองค์กร
+																		</option>
+																		<option>
+																			บริหารทรัพยากรมนุษย์
+																		</option>
+																		<option>
+																			บัญชี
+																		</option>
+																		<option>
+																			ขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ผู้บริหารสูงสุด
+																		</option>
+																		<option>
+																			ผู้ช่วยบริหาร
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายบุคคล
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ระดับสูงสุด
+																		</option>
+																		<option>
+																			ระดับ 1
+																		</option>
+																		<option>
+																			ระดับ 2
+																		</option>
+																		<option>
+																			ระดับ 3
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			เท่ากับ
+																		</option>
+																		<option>
+																			มากกว่า
+																		</option>
+																		<option>
+																			มากกว่าหรือมากกว่า
+																		</option>
+																		<option>
+																			น้อยกว่า
+																		</option>
+																		<option>
+																			น้อยกว่าหรือมากกว่า
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				ปี
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<input type="text" class="form-control">
+																</td>
+																<td class="text-center">
+																	<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+																		<i class="la la-trash" style="color:#ffffff;"></i>
+																	</a>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="m-form__group form-group row">
+													<div class="col-lg-12 col-xs-12">
+														<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+															<span>
+																<i class="la la-plus"></i>
+																<span>
+																	เพิ่ม
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary">
+												บันทึก
+											</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">
+												ปิด
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end::Modal-->
+						</div>
+
+
+						<div *ngIf="welfareTypeCondition == '2'">
+							<div class="row mt-2">
+								<div class="col-md-12">กรณีเลือกประเภท กู้ยืม จะต้องระบุเงื่อนไขตามรายละเอียดด้านล่าง
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-12">
+									<div class="m-radio-inline">
+										<label class="m-radio m-radio--solid m-radio--success">
+											<input type="radio" name="example_2" value="1" checked (click)="checkCondition(false,2)"> ไม่มีเงื่อนไข
+											<span></span>
+										</label>
+										<label class="m-radio m-radio--solid m-radio--success">
+											<input type="radio" name="example_2" value="2" (click)="checkCondition(true,2)"> มีเงื่อนไข
+											<span></span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div *ngIf="condition; else elseBlock">
+								<div id="m_repeater_2" class="mt-3">
+									<div class="table-responsive">
+										<table class="table table-bordered" data-repeater-list="">
+											<thead class="thead-bg">
+												<tr>
+													<th class="text-center" style="width:220px">
+														หน่วยงาน
+													</th>
+													<th class="text-center" style="width:220px">
+														ตำแหน่ง
+													</th>
+													<th class="text-center" style="width:190px">
+														ระดับ
+													</th>
+													<th class="text-center" style="width:250px">
+														เงื่อนไข
+													</th>
+													<th class="text-center" style="width:160px">
+														ช่วงอายุงาน
+													</th>
+													<th class="text-center" style="width:220px">
+														วงเงินให้กู้
+													</th>
+													<th class="text-center" style="width:150px">
+														อัตราดอกเบี้ย
+													</th>
+													<th class="text-center" style="width:150px">
+														แบบอัตราดอกเบี้ย
+													</th>
+													<th class="text-center" style="width:200px">
+														รายละเอียด
+													</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-repeater-item>
+													<td class="text-center" style="width: 300px;">
+														<select class="form-control" name="parsam">
+															<option disabled>--เลือก--</option>
+															<option>
+																บริหารองค์กร
+															</option>
+															<option>
+																บริหารทรัพยากรมนุษย์
+															</option>
+															<option>
+																บัญชี
+															</option>
+															<option>
+																ขาย
+															</option>
+														</select>
+													</td>
+													<td class="text-center">
+														<select class="form-control" name="parsam">
+															<option disabled>--เลือก--</option>
+															<option>
+																ผู้บริหารสูงสุด
+															</option>
+															<option>
+																ผู้ช่วยบริหาร
+															</option>
+															<option>
+																ผู้จัดการฝ่ายบุคคล
+															</option>
+															<option>
+																ผู้จัดการฝ่ายขาย
+															</option>
+														</select>
+													</td>
+													<td class="text-center">
+														<select class="form-control" name="parsam">
+															<option disabled>--เลือก--</option>
+															<option>
+																ระดับสูงสุด
+															</option>
+															<option>
+																ระดับ 1
+															</option>
+															<option>
+																ระดับ 2
+															</option>
+															<option>
+																ระดับ 3
+															</option>
+														</select>
+													</td>
+													<td class="text-center">
+														<select class="form-control" name="parsam">
+															<option disabled>--เลือก--</option>
+															<option>
+																เท่ากับ
+															</option>
+															<option>
+																มากกว่า
+															</option>
+															<option>
+																มากกว่าหรือมากกว่า
+															</option>
+															<option>
+																น้อยกว่า
+															</option>
+															<option>
+																น้อยกว่าหรือมากกว่า
+															</option>
+														</select>
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	ปี
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	%
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<a href="#" data-toggle="modal" data-target="#m_modal_2">เลือก</a>
+													</td>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+															<i class="la la-trash" style="color:#ffffff;"></i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="m-form__group form-group row">
+										<div class="col-lg-12 col-xs-12">
+											<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+												<span>
+													<i class="la la-plus"></i>
+													<span>
+														เพิ่ม
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--begin::Modal-->
+								<div class="modal fade" id="m_modal_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-llg" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalLabel">
+													แบบอัตราดอกเบี้ย
+												</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">
+														&times;
+													</span>
+												</button>
+											</div>
+											<div class="modal-body">
+												<div class="row">
+													<div class="col-md-12">
+														<fieldset>
+															<legend>&nbsp;&nbsp;&nbsp;แบบอัตราดอกเบี้ย&nbsp;&nbsp;&nbsp;</legend>
+															<div class="row mt-2">
+																<div class="col-md-12">
+																	<div class="m-radio-inline">
+																		<label class="m-radio m-radio--success m-radio--solid">
+																			<input type="radio" name="example_1" value="1" checked (click)="hideStaircaseType=0"> แบบขั้นบันได
+																			<span></span>
+																		</label>
+																		<label class="m-radio m-radio--success m-radio--solid" (click)="hideStaircaseType=1">
+																			<input type="radio" name="example_1" value="1"> แบบคงที่
+																			<span></span>
+																		</label>
+																		<label class="m-radio m-radio--success m-radio--solid" (click)="hideStaircaseType=1">
+																			<input type="radio" name="example_1" value="1"> แบบลดต้นลดดอก (ต่อปี)
+																			<span></span>
+																		</label>
+																	</div>
+																</div>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+
+												<div class="row mt-3" [hidden]="hideStaircaseType">
+													<div class="col-md-12">
+														<fieldset>
+															<legend>&nbsp;&nbsp;&nbsp;อัตราดอกเบี้ยแบบขั้นบันได&nbsp;&nbsp;&nbsp;</legend>
+															<div class="row mt-2">
+																<div class="col-md-12">
+																	<div id="m_repeater_2">
+																		<div class="table-responsive">
+																			<table class="table table-bordered" data-repeater-list="">
+																				<thead class="thead-bg">
+																					<tr>
+																						<th class="text-center" style="width:200px">
+																							จากงวดที่
+																						</th>
+																						<th class="text-center" style="width:200px">
+																							ถึงงวดที่
+																						</th>
+																						<th class="text-center" style="width:200px">
+																							อัตราดอกเบี้ย
+																						</th>
+																						<th class="text-center" style="width:200px">
+																							รายละเอียด
+																						</th>
+																						<th style="width:80px"></th>
+																					</tr>
+																				</thead>
+																				<tbody>
+																					<tr data-repeater-item>
+																						<td class="text-center">
+																							<input type="text" class="form-control">
+																						</td>
+																						<td class="text-center">
+																							<input type="text" class="form-control">
+																						</td>
+																						<td class="text-center">
+																							<div class="input-group">
+																								<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																								<div class="input-group-append">
+																									<span class="input-group-text" id="basic-addon2">
+																										฿
+																									</span>
+																								</div>
+																							</div>
+																						</td>
+																						<td class="text-center">
+																							<input type="text" class="form-control">
+																						</td>
+																						<td class="text-center">
+																							<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+																								<i class="la la-trash" style="color:#ffffff;"></i>
+																							</a>
+																						</td>
+																					</tr>
+																				</tbody>
+																			</table>
+																		</div>
+																		<div class="m-form__group form-group row">
+																			<div class="col-lg-12 col-xs-12">
+																				<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+																					<span>
+																						<i class="la la-plus"></i>
+																						<span>
+																							เพิ่ม
+																						</span>
+																					</span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</fieldset>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-primary">
+													บันทึก
+												</button>
+												<button type="button" class="btn btn-secondary" data-dismiss="modal">
+													ปิด
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!--end::Modal-->
+							</div>
+							<ng-template #elseBlock>
+								<div class="row mt-3">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="recipient-name" class="form-control-label">
+												วงเงินให้กู้ :
+											</label>
+											<div class="input-group">
+												<input type="number" class="form-control m-input" placeholder="Ex. 100000.00" aria-describedby="basic-addon2" min="0">
+												<div class="input-group-append">
+													<span class="input-group-text" id="basic-addon2">
+														฿
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="recipient-name" class="form-control-label">
+												อัตราดอกเบี้ย :
+											</label>
+											<div class="input-group">
+												<input type="number" class="form-control m-input" placeholder="Ex. 2" aria-describedby="basic-addon2" min="0">
+												<div class="input-group-append">
+													<span class="input-group-text" id="basic-addon2">
+														%
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<label for="message-text" class="form-control-label">
+												รายละเอียด :
+											</label>
+											<textarea class="form-control" id="message-text" placeholder="กรุณากรอกรายละเอียด"></textarea>
+										</div>
+									</div>
+								</div>
+							</ng-template>
+						</div>
+
+
+						<div *ngIf="welfareTypeCondition == '3'">
+							<div class="row mt-2">
+								<div class="col-md-12">กรณีเลือกประเภท กองทุน จะต้องระบุเงื่อนไขตามรายละเอียดด้านล่าง
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-12">
+								</div>
+							</div>
+							<div>
+								<div id="m_repeater_2" class="mt-3">
+									<div class="table-responsive">
+										<table class="table table-bordered" data-repeater-list="">
+											<thead class="thead-bg">
+												<tr>
+													<th class="text-center" width="160">
+														ระดับสมาชิก
+													</th>
+													<th class="text-center" width="180">
+														ค่าธรรมเนียมแรกเข้า
+													</th>
+													<th class="text-center" width="190">
+														อัตราค่าบำรุง (รายปี)
+													</th>
+													<th class="text-center">
+														อัตราค่าบำรุง (รายเดือน)
+													</th>
+													<th class="text-center">
+														วงเงินที่ได้รับ
+													</th>
+													<th class="text-center">
+														รายละเอียด
+													</th>
+													<th class="text-center">
+														เงื่อนไข
+													</th>
+													<th>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-repeater-item>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 1000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 12000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 12000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 12000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<a href="#" data-toggle="modal" data-target="#m_modal_1">เพิ่ม</a>
+													</td>
+													<td class="text-center">
+														<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+															<i class="la la-trash" style="color:#ffffff;"></i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="m-form__group form-group row">
+										<div class="col-lg-12 col-xs-12">
+											<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+												<span>
+													<i class="la la-plus"></i>
+													<span>
+														เพิ่ม
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--begin::Modal-->
+							<div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-llg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">
+												เงื่อนไข
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">
+													&times;
+												</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div id="m_repeater_2">
+												<div class="table-responsive">
+													<table class="table table-bordered" data-repeater-list="">
+														<thead class="thead-bg">
+															<tr>
+																<th class="text-center" style="width:220px">
+																	หน่วยงาน
+																</th>
+																<th class="text-center" style="width:220px">
+																	ตำแหน่ง
+																</th>
+																<th class="text-center" style="width:190px">
+																	ระดับ
+																</th>
+																<th class="text-center" style="width:250px">
+																	เงื่อนไข
+																</th>
+																<th class="text-center" style="width:160px">
+																	ช่วงอายุงาน
+																</th>
+																<th class="text-center" style="width:160px">
+																	ค่าธรรมเนียมแรกเข้า
+																</th>
+																<th class="text-center" style="width:160px">
+																	อัตราค่าบำรุง (รายปี)
+																</th>
+																<th class="text-center" style="width:160px">
+																	อัตราค่าบำรุง (รายเดือน)
+																</th>
+																<th class="text-center" style="width:160px">
+																	วงเงินที่ได้รับ
+																</th>
+																<th class="text-center" style="width:160px">
+																	รายละเอียด
+																</th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr data-repeater-item>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			บริหารองค์กร
+																		</option>
+																		<option>
+																			บริหารทรัพยากรมนุษย์
+																		</option>
+																		<option>
+																			บัญชี
+																		</option>
+																		<option>
+																			ขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ผู้บริหารสูงสุด
+																		</option>
+																		<option>
+																			ผู้ช่วยบริหาร
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายบุคคล
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ระดับสูงสุด
+																		</option>
+																		<option>
+																			ระดับ 1
+																		</option>
+																		<option>
+																			ระดับ 2
+																		</option>
+																		<option>
+																			ระดับ 3
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			เท่ากับ
+																		</option>
+																		<option>
+																			มากกว่า
+																		</option>
+																		<option>
+																			มากกว่าหรือมากกว่า
+																		</option>
+																		<option>
+																			น้อยกว่า
+																		</option>
+																		<option>
+																			น้อยกว่าหรือมากกว่า
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				ปี
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<input type="text" class="form-control">
+																</td>
+																<td class="text-center">
+																	<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+																		<i class="la la-trash" style="color:#ffffff;"></i>
+																	</a>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="m-form__group form-group row">
+													<div class="col-lg-12 col-xs-12">
+														<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+															<span>
+																<i class="la la-plus"></i>
+																<span>
+																	เพิ่ม
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary">
+												บันทึก
+											</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">
+												ปิด
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end::Modal-->
+						</div>
+
+						<div *ngIf="welfareTypeCondition == '4'">
+							<div class="row mt-2">
+								<div class="col-md-12">กรณีเลือกประเภท เงินทดแทน จะต้องระบุเงื่อนไขตามรายละเอียดด้านล่าง
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-12">
+								</div>
+							</div>
+							<div>
+								<div id="m_repeater_2" class="mt-3">
+									<div class="table-responsive">
+										<table class="table table-bordered" data-repeater-list="">
+											<thead class="thead-bg">
+												<tr>
+													<th class="text-center" width="160">
+														รายการ
+													</th>
+													<th class="text-center" width="180">
+														วงเงิน
+													</th>
+													<th class="text-center">
+														รายละเอียด
+													</th>
+													<th class="text-center">
+														เงื่อนไข
+													</th>
+													<th>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-repeater-item>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 1000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<a href="#" data-toggle="modal" data-target="#m_modal_1">เพิ่ม</a>
+													</td>
+													<td class="text-center">
+														<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+															<i class="la la-trash" style="color:#ffffff;"></i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="m-form__group form-group row">
+										<div class="col-lg-12 col-xs-12">
+											<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+												<span>
+													<i class="la la-plus"></i>
+													<span>
+														เพิ่ม
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--begin::Modal-->
+							<div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-llg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">
+												เงื่อนไข
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">
+													&times;
+												</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div id="m_repeater_2">
+												<div class="table-responsive">
+													<table class="table table-bordered" data-repeater-list="">
+														<thead class="thead-bg">
+															<tr>
+																<th class="text-center" style="width:220px">
+																	หน่วยงาน
+																</th>
+																<th class="text-center" style="width:220px">
+																	ตำแหน่ง
+																</th>
+																<th class="text-center" style="width:190px">
+																	ระดับ
+																</th>
+																<th class="text-center" style="width:250px">
+																	เงื่อนไข
+																</th>
+																<th class="text-center" style="width:160px">
+																	ช่วงอายุงาน
+																</th>
+																<th class="text-center" style="width:160px">
+																	วงเงิน
+																</th>
+																<th class="text-center" style="width:160px">
+																	รายละเอียด
+																</th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr data-repeater-item>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			บริหารองค์กร
+																		</option>
+																		<option>
+																			บริหารทรัพยากรมนุษย์
+																		</option>
+																		<option>
+																			บัญชี
+																		</option>
+																		<option>
+																			ขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ผู้บริหารสูงสุด
+																		</option>
+																		<option>
+																			ผู้ช่วยบริหาร
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายบุคคล
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ระดับสูงสุด
+																		</option>
+																		<option>
+																			ระดับ 1
+																		</option>
+																		<option>
+																			ระดับ 2
+																		</option>
+																		<option>
+																			ระดับ 3
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			เท่ากับ
+																		</option>
+																		<option>
+																			มากกว่า
+																		</option>
+																		<option>
+																			มากกว่าหรือมากกว่า
+																		</option>
+																		<option>
+																			น้อยกว่า
+																		</option>
+																		<option>
+																			น้อยกว่าหรือมากกว่า
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				ปี
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<input type="text" class="form-control">
+																</td>
+																<td class="text-center">
+																	<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+																		<i class="la la-trash" style="color:#ffffff;"></i>
+																	</a>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="m-form__group form-group row">
+													<div class="col-lg-12 col-xs-12">
+														<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+															<span>
+																<i class="la la-plus"></i>
+																<span>
+																	เพิ่ม
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary">
+												บันทึก
+											</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">
+												ปิด
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end::Modal-->
+						</div>
+
+						<div *ngIf="welfareTypeCondition == '5'">
+							<div class="row mt-2">
+								<div class="col-md-12">กรณีเลือกประเภท ค่าการศึกษาบุตร จะต้องระบุเงื่อนไขตามรายละเอียดด้านล่าง
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-12">
+								</div>
+							</div>
+							<div>
+								<div id="m_repeater_2" class="mt-3">
+									<div class="table-responsive">
+										<table class="table table-bordered" data-repeater-list="">
+											<thead class="thead-bg">
+												<tr>
+													<th class="text-center" width="160">
+														ระดับการศึกษา
+													</th>
+													<th class="text-center" width="180">
+														จำนวนเงินที่ได้รับ
+													</th>
+													<th class="text-center">
+														รายละเอียด
+													</th>
+													<th class="text-center">
+														เงื่อนไข
+													</th>
+													<th>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-repeater-item>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 1000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<a href="#" data-toggle="modal" data-target="#m_modal_1">เพิ่ม</a>
+													</td>
+													<td class="text-center">
+														<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+															<i class="la la-trash" style="color:#ffffff;"></i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="m-form__group form-group row">
+										<div class="col-lg-12 col-xs-12">
+											<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+												<span>
+													<i class="la la-plus"></i>
+													<span>
+														เพิ่ม
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--begin::Modal-->
+							<div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-llg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">
+												เงื่อนไข
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">
+													&times;
+												</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div id="m_repeater_2">
+												<div class="table-responsive">
+													<table class="table table-bordered" data-repeater-list="">
+														<thead class="thead-bg">
+															<tr>
+																<th class="text-center" style="width:220px">
+																	หน่วยงาน
+																</th>
+																<th class="text-center" style="width:220px">
+																	ตำแหน่ง
+																</th>
+																<th class="text-center" style="width:190px">
+																	ระดับ
+																</th>
+																<th class="text-center" style="width:250px">
+																	เงื่อนไข
+																</th>
+																<th class="text-center" style="width:160px">
+																	ช่วงอายุงาน
+																</th>
+																<th class="text-center" style="width:160px">
+																	จำนวนเงินที่ได้รับ
+																</th>
+																<th class="text-center" style="width:160px">
+																	รายละเอียด
+																</th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr data-repeater-item>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			บริหารองค์กร
+																		</option>
+																		<option>
+																			บริหารทรัพยากรมนุษย์
+																		</option>
+																		<option>
+																			บัญชี
+																		</option>
+																		<option>
+																			ขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ผู้บริหารสูงสุด
+																		</option>
+																		<option>
+																			ผู้ช่วยบริหาร
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายบุคคล
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ระดับสูงสุด
+																		</option>
+																		<option>
+																			ระดับ 1
+																		</option>
+																		<option>
+																			ระดับ 2
+																		</option>
+																		<option>
+																			ระดับ 3
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			เท่ากับ
+																		</option>
+																		<option>
+																			มากกว่า
+																		</option>
+																		<option>
+																			มากกว่าหรือมากกว่า
+																		</option>
+																		<option>
+																			น้อยกว่า
+																		</option>
+																		<option>
+																			น้อยกว่าหรือมากกว่า
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				ปี
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<input type="text" class="form-control">
+																</td>
+																<td class="text-center">
+																	<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+																		<i class="la la-trash" style="color:#ffffff;"></i>
+																	</a>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="m-form__group form-group row">
+													<div class="col-lg-12 col-xs-12">
+														<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+															<span>
+																<i class="la la-plus"></i>
+																<span>
+																	เพิ่ม
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary">
+												บันทึก
+											</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">
+												ปิด
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end::Modal-->
+						</div>
+
+						<div *ngIf="welfareTypeCondition == '6'">
+								<div class="row mt-2">
+									<div class="col-md-12">กรณีเลือกประเภท ทรัพย์สิน จะต้องระบุเงื่อนไขตามรายละเอียดด้านล่าง
+									</div>
+								</div>
+								<div class="row mt-3">
+									<div class="col-md-12">
+										<div class="m-radio-inline">
+											<label class="m-radio m-radio--solid m-radio--success">
+												<input type="radio" name="example_2" value="1" checked (click)="checkCondition(false,6)"> ไม่มีเงื่อนไข
+												<span></span>
+											</label>
+											<label class="m-radio m-radio--solid m-radio--success">
+												<input type="radio" name="example_2" value="2" (click)="checkCondition(true,6)"> มีเงื่อนไข
+												<span></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div *ngIf="condition; else elseBlock">
+									<div id="m_repeater_2" class="mt-3">
+										<div class="table-responsive">
+											<table class="table table-bordered" data-repeater-list="">
+												<thead class="thead-bg">
+													<tr>
+														<th class="text-center" style="width:220px">
+															หน่วยงาน
+														</th>
+														<th class="text-center" style="width:220px">
+															ตำแหน่ง
+														</th>
+														<th class="text-center" style="width:190px">
+															ระดับ
+														</th>
+														<th class="text-center" style="width:250px">
+															เงื่อนไข
+														</th>
+														<th class="text-center" style="width:160px">
+															ช่วงอายุงาน
+														</th>
+														<th class="text-center" style="width:220px">
+															จำนวนเงิน
+														</th>
+														<th class="text-center" style="width:200px">
+															รายละเอียด
+														</th>
+														<th></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr data-repeater-item>
+														<td class="text-center" style="width: 300px;">
+															<select class="form-control" name="parsam">
+																<option disabled>--เลือก--</option>
+																<option>
+																	บริหารองค์กร
+																</option>
+																<option>
+																	บริหารทรัพยากรมนุษย์
+																</option>
+																<option>
+																	บัญชี
+																</option>
+																<option>
+																	ขาย
+																</option>
+															</select>
+														</td>
+														<td class="text-center">
+															<select class="form-control" name="parsam">
+																<option disabled>--เลือก--</option>
+																<option>
+																	ผู้บริหารสูงสุด
+																</option>
+																<option>
+																	ผู้ช่วยบริหาร
+																</option>
+																<option>
+																	ผู้จัดการฝ่ายบุคคล
+																</option>
+																<option>
+																	ผู้จัดการฝ่ายขาย
+																</option>
+															</select>
+														</td>
+														<td class="text-center">
+															<select class="form-control" name="parsam">
+																<option disabled>--เลือก--</option>
+																<option>
+																	ระดับสูงสุด
+																</option>
+																<option>
+																	ระดับ 1
+																</option>
+																<option>
+																	ระดับ 2
+																</option>
+																<option>
+																	ระดับ 3
+																</option>
+															</select>
+														</td>
+														<td class="text-center">
+															<select class="form-control" name="parsam">
+																<option disabled>--เลือก--</option>
+																<option>
+																	เท่ากับ
+																</option>
+																<option>
+																	มากกว่า
+																</option>
+																<option>
+																	มากกว่าหรือมากกว่า
+																</option>
+																<option>
+																	น้อยกว่า
+																</option>
+																<option>
+																	น้อยกว่าหรือมากกว่า
+																</option>
+															</select>
+														</td>
+														<td class="text-center">
+															<div class="input-group">
+																<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																<div class="input-group-append">
+																	<span class="input-group-text" id="basic-addon2">
+																		ปี
+																	</span>
+																</div>
+															</div>
+														</td>														
+														<td class="text-center">
+																<div class="input-group">
+																	<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																	<div class="input-group-append">
+																		<span class="input-group-text" id="basic-addon2">
+																			฿
+																		</span>
+																	</div>
+																</div>
+															</td>
+														<td class="text-center">
+															<input type="text" class="form-control">
+														</td>
+														<td class="text-center">
+															<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+																<i class="la la-trash" style="color:#ffffff;"></i>
+															</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="m-form__group form-group row">
+											<div class="col-lg-12 col-xs-12">
+												<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+													<span>
+														<i class="la la-plus"></i>
+														<span>
+															เพิ่ม
+														</span>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ng-template #elseBlock>
+									<div class="row mt-3">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="recipient-name" class="form-control-label">
+													จำนวนเงิน :
+												</label>
+												<div class="input-group">
+													<input type="number" class="form-control m-input" placeholder="Ex. 100000.00" aria-describedby="basic-addon2" min="0">
+													<div class="input-group-append">
+														<span class="input-group-text" id="basic-addon2">
+															฿
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>										
+									</div>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="form-group">
+												<label for="message-text" class="form-control-label">
+													รายละเอียด :
+												</label>
+												<textarea class="form-control" id="message-text" placeholder="กรุณากรอกรายละเอียด"></textarea>
+											</div>
+										</div>
+									</div>
+								</ng-template>
+							</div>
+
+						<div *ngIf="welfareTypeCondition == '7'">
+							<div class="row mt-2">
+								<div class="col-md-12">กรณีเลือกประเภท สวัสดิการอื่นๆ จะต้องระบุเงื่อนไขตามรายละเอียดด้านล่าง
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-12">
+								</div>
+							</div>
+							<div>
+								<div id="m_repeater_2" class="mt-3">
+									<div class="table-responsive">
+										<table class="table table-bordered" data-repeater-list="">
+											<thead class="thead-bg">
+												<tr>
+													<th class="text-center" width="160">
+														รายการ
+													</th>
+													<th class="text-center" width="180">
+														วงเงิน
+													</th>
+													<th class="text-center">
+														รายละเอียด
+													</th>
+													<th class="text-center">
+														เงื่อนไข
+													</th>
+													<th>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr data-repeater-item>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<div class="input-group">
+															<input type="number" class="form-control m-input" placeholder="Ex. 1000.00" aria-describedby="basic-addon2" min="0">
+															<div class="input-group-append">
+																<span class="input-group-text" id="basic-addon2">
+																	฿
+																</span>
+															</div>
+														</div>
+													</td>
+													<td class="text-center">
+														<input type="text" class="form-control">
+													</td>
+													<td class="text-center">
+														<a href="#" data-toggle="modal" data-target="#m_modal_1">เพิ่ม</a>
+													</td>
+													<td class="text-center">
+														<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+															<i class="la la-trash" style="color:#ffffff;"></i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="m-form__group form-group row">
+										<div class="col-lg-12 col-xs-12">
+											<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+												<span>
+													<i class="la la-plus"></i>
+													<span>
+														เพิ่ม
+													</span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--begin::Modal-->
+							<div class="modal fade" id="m_modal_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal-dialog modal-llg" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="exampleModalLabel">
+												เงื่อนไข
+											</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">
+													&times;
+												</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div id="m_repeater_2">
+												<div class="table-responsive">
+													<table class="table table-bordered" data-repeater-list="">
+														<thead class="thead-bg">
+															<tr>
+																<th class="text-center" style="width:220px">
+																	หน่วยงาน
+																</th>
+																<th class="text-center" style="width:220px">
+																	ตำแหน่ง
+																</th>
+																<th class="text-center" style="width:190px">
+																	ระดับ
+																</th>
+																<th class="text-center" style="width:250px">
+																	เงื่อนไข
+																</th>
+																<th class="text-center" style="width:160px">
+																	ช่วงอายุงาน
+																</th>
+																<th class="text-center" style="width:160px">
+																	วงเงิน
+																</th>
+																<th class="text-center" style="width:160px">
+																	รายละเอียด
+																</th>
+																<th></th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr data-repeater-item>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			บริหารองค์กร
+																		</option>
+																		<option>
+																			บริหารทรัพยากรมนุษย์
+																		</option>
+																		<option>
+																			บัญชี
+																		</option>
+																		<option>
+																			ขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ผู้บริหารสูงสุด
+																		</option>
+																		<option>
+																			ผู้ช่วยบริหาร
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายบุคคล
+																		</option>
+																		<option>
+																			ผู้จัดการฝ่ายขาย
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			ระดับสูงสุด
+																		</option>
+																		<option>
+																			ระดับ 1
+																		</option>
+																		<option>
+																			ระดับ 2
+																		</option>
+																		<option>
+																			ระดับ 3
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<select class="form-control" name="parsam">
+																		<option disabled>--เลือก--</option>
+																		<option>
+																			เท่ากับ
+																		</option>
+																		<option>
+																			มากกว่า
+																		</option>
+																		<option>
+																			มากกว่าหรือมากกว่า
+																		</option>
+																		<option>
+																			น้อยกว่า
+																		</option>
+																		<option>
+																			น้อยกว่าหรือมากกว่า
+																		</option>
+																	</select>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				ปี
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<div class="input-group">
+																		<input type="number" class="form-control m-input" aria-describedby="basic-addon2" min="0">
+																		<div class="input-group-append">
+																			<span class="input-group-text" id="basic-addon2">
+																				฿
+																			</span>
+																		</div>
+																	</div>
+																</td>
+																<td class="text-center">
+																	<input type="text" class="form-control">
+																</td>
+																<td class="text-center">
+																	<a data-repeater-delete="" class=" btn btn-danger m-btn m-btn--icon btn-sm m-btn--icon-only m-btn--pill">
+																		<i class="la la-trash" style="color:#ffffff;"></i>
+																	</a>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="m-form__group form-group row">
+													<div class="col-lg-12 col-xs-12">
+														<div data-repeater-create="" class="btn btn-success m-btn m-btn--icon m-btn--pill m-btn--wide pull-right">
+															<span>
+																<i class="la la-plus"></i>
+																<span>
+																	เพิ่ม
+																</span>
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary">
+												บันทึก
+											</button>
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">
+												ปิด
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--end::Modal-->
+						</div>
+
+
+					</fieldset>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>&nbsp;&nbsp;&nbsp;เงื่อนไขอื่นๆ&nbsp;&nbsp;&nbsp;</legend>
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="m-checkbox-inline">
+									<label class="m-checkbox m-checkbox--success m-checkbox--solid">
+										<input type="checkbox" name="example_3" value="1"> ชำระสวัสดิการ
+										<span></span>
+									</label>
+									<label class="m-checkbox m-checkbox--success m-checkbox--solid">
+										<input type="checkbox" name="example_3" value="2"> ผ่านการทดลองงาน
+										<span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>&nbsp;&nbsp;&nbsp;ประเภทพนักงาน&nbsp;&nbsp;&nbsp;</legend>
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="m-checkbox-inline">
+									<label class="m-checkbox m-checkbox--success m-checkbox--solid">
+										<input type="checkbox" name="example_3" value="1"> พนักงานประจำ
+										<span></span>
+									</label>
+									<label class="m-checkbox m-checkbox--success m-checkbox--solid">
+										<input type="checkbox" name="example_3" value="2"> พนักงานรายเดือน
+										<span></span>
+									</label>
+									<label class="m-checkbox m-checkbox--success m-checkbox--solid">
+										<input type="checkbox" name="example_3" value="2"> พนักงานรายวัน
+										<span></span>
+									</label>
+									<label class="m-checkbox m-checkbox--success m-checkbox--solid">
+										<input type="checkbox" name="example_3" value="2"> พนักงานพาร์ทไทม์
+										<span></span>
+									</label>
+									<label class="m-checkbox m-checkbox--success m-checkbox--solid">
+										<input type="checkbox" name="example_3" value="2"> พนักงานทดลองงาน
+										<span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div class="row mt-3">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>&nbsp;&nbsp;&nbsp;การหักสะสม&nbsp;&nbsp;&nbsp;</legend>
+						<div class="row mt-2">
+							<div class="col-md-12">
+								<div class="m-radio-inline">
+									<label class="m-radio m-radio--success m-radio--solid">
+										<input type="radio" name="example_1" value="1" checked> ไม่หักสะสม
+										<span></span>
+									</label>
+									<label class="m-radio m-radio--success m-radio--solid">
+										<input type="radio" name="example_1" value="1"> หักสะสม
+										<span></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

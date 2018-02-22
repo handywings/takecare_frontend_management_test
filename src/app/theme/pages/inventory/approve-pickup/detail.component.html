@@ -1,0 +1,366 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				บันทึกใบขอเบิก
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/inventory" class="m-nav__link">
+						<span class="m-nav__link-text">
+							ระบบคลังสินค้า
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/inventory/approvepickup" class="m-nav__link">
+						<span class="m-nav__link-text">
+								อนุมัติใบเบิก
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<span class="m-nav__link-text">
+						รายละเอียดใบเบิก
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__body">
+			<div class="row">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>&nbsp;&nbsp;&nbsp;ข้อมูลใบขอเบิก&nbsp;&nbsp;&nbsp;</legend>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ประเภทการเบิก
+									</label>
+									<select class="form-control m-select2 m_select2_1" name="param">
+											<option>--เลือก--</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										เบิกภายใต้โครงการ
+									</label>
+									<select class="form-control m-select2 m_select2_1" name="param">
+											<option>--เลือก--</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-4">
+									<div class="form-group">
+										<label for="recipient-name" class="form-control-label">
+											เบิกให้กับหน่วนงาน
+										</label>
+										<select class="form-control m-select2 m_select2_1" name="param">
+											<option>--เลือก--</option>
+										</select>
+									</div>
+								</div>
+						</div>
+						<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="recipient-name" class="form-control-label">
+											รายละเอียด
+										</label>
+										<textarea class="form-control m-input" id="exampleTextarea" rows="3"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row mt-3">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="recipient-name" class="form-control-label">
+											ผู้ขอเบิก
+										</label>
+										นายสมชาย กลัดเข็ม ตำแหน่ง Programmer แผนก IT
+									</div>
+								</div>
+							</div>
+					</fieldset>
+				</div>
+			</div>
+			<br/>
+			<div class="row">
+				<div class="col-md-12">
+					<fieldset>
+						<legend>&nbsp;&nbsp;&nbsp;รายการสินค้า&nbsp;&nbsp;&nbsp;</legend>
+						<div class="row mt-3">
+							<div class="col-md-12">
+								<div class="row" style="padding-bottom:3px">
+									<div class="col-md-12 mt-12" style="text-align:left">
+										เลขที่ใบขอเบิก XXX ผู้เบิก นายสมชาย กลัดเข็ม ตำแหน่ง Programmer แผนก IT
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead class="thead-bg">
+											<tr>
+												<td rowspan="2">รหัสสินค้า</td>
+												<td rowspan="2">ชื่อสินค้า</td>
+												<td rowspan="2">เบิกจากคลัง</td>
+												<td colspan="3" class="text-center">เบิกไป</td>
+												<td rowspan="2">จำนวนเบิกเพิ่ม</td>
+												<td rowspan="2">หน่วยนับ</td>
+												<td rowspan="2">เบิกได้ไม่เกิน</td>
+												<td colspan="2" class="text-center">ต้นทุน (บาท)</td>
+												<td rowspan="2">รวม (บาท)</td>
+											</tr>
+											<tr>
+												<td>คลังสินค้า</td>
+												<td>ที่เก็บ</td>
+												<td>คงเหลือ</td>
+												<td>จริง</td>
+												<td>เบิก</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													XXX
+												</td>
+												<td>
+													XXXXXXXXXX (TH/EN) <br/>
+													S/N XXXXXXXXXX<br/>
+													กลุ่มหมวดสินค้า
+												</td>
+												<td>
+													XXX
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+															<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+															<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													2 กล่อง
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+															<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													3 กล่อง
+												</td>
+												<td>
+													XXX
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+												 
+											</tr>
+											<tr class="thead-bg">
+												<td colspan="11">
+													<span class="pull-right">รวม (บาท)</span>
+												</td>
+												<td>
+													<span class="pull-right">XXX,XXX.XX</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<hr />
+						<div class="row mt-3">
+							<div class="col-md-12">
+								<div class="row" style="padding-bottom:3px">
+								<div class="col-md-12 mt-12" style="text-align:left">
+									เลขที่ใบขอเบิก XXX ผู้เบิก นายสมชาย กลัดเข็ม ตำแหน่ง Programmer แผนก IT
+								</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-bordered">
+										<thead class="thead-bg">
+											<tr>
+												<td rowspan="2">รหัสสินค้า</td>
+												<td rowspan="2">ชื่อสินค้า</td>
+												<td rowspan="2">เบิกจากคลัง</td>
+												<td colspan="3" class="text-center">เบิกไป</td>
+												<td rowspan="2">จำนวนเบิกเพิ่ม</td>
+												<td rowspan="2">หน่วยนับ</td>
+												<td rowspan="2">เบิกได้ไม่เกิน</td>
+												<td colspan="2" class="text-center">ต้นทุน (บาท)</td>
+												<td rowspan="2">รวม (บาท)</td>
+											</tr>
+											<tr>
+												<td>คลังสินค้า</td>
+												<td>ที่เก็บ</td>
+												<td>คงเหลือ</td>
+												<td>จริง</td>
+												<td>เบิก</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													XXX
+												</td>
+												<td>
+													XXXXXXXXXX (TH/EN)
+													<br/> S/N XXXXXXXXXX
+													<br/> กลุ่มหมวดสินค้า
+												</td>
+												<td>
+													XXX
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+														<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+														<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													2 กล่อง
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+														<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													3 กล่อง
+												</td>
+												<td>
+													XXX
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+											</tr>
+											<tr>
+												<td>
+													XXX
+												</td>
+												<td>
+													XXXXXXXXXX (TH/EN)
+													<br/> S/N XXXXXXXXXX
+													<br/> กลุ่มหมวดสินค้า
+												</td>
+												<td>
+													XXX
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+														<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+														<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													2 กล่อง
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+												<td>
+													<select class="form-control" name="parsam">
+														<option>--เลือก--</option>
+													</select>
+												</td>
+												<td>
+													3 กล่อง
+												</td>
+												<td>
+													XXX
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+												<td>
+													<input type="text" class="form-control" />
+												</td>
+												 
+											</tr>
+											<tr class="thead-bg">
+												<td colspan="11"><span class="pull-right">รวม (บาท)</span></td>
+												<td><span class="pull-right">XXX,XXX.XX</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<hr />
+						<br />
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										คำอธิบาย / คำพิจารณา
+									</label>
+									<textarea class="form-control m-input" id="exampleTextarea" rows="3"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<button class="btn btn-success pull-right" type="button">
+									อนุมัติ
+								</button>
+							</div>
+							<div class="col-md-6">
+								<button class="btn btn-danger pull-left" type="button">
+									ไม่อนุมัติ
+								</button>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

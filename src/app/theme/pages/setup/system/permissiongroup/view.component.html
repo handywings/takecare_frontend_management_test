@@ -1,0 +1,242 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				รายละเอียดกลุ่มสิทธิ์ผู้ใช้งาน
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							ตั้งค่าเริ่มต้น
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/setup/system/permissiongroup" class="m-nav__link">
+						<span class="m-nav__link-text">
+							กลุ่มสิทธิ์ผู้ใช้งาน
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a href="" class="m-nav__link">
+						<span class="m-nav__link-text">
+							รายละเอียดกลุ่มสิทธิ์ผู้ใช้งาน
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__head">
+			<div class="m-portlet__head-caption">
+				<div class="m-portlet__head-title">
+					<h3 class="m-portlet__head-text">
+						ข้อมูลสิทธิ์การใช้งาน
+					</h3>
+				</div>
+			</div>
+		</div>
+		<div class="m-portlet__body">
+			<div class="row mb-3">
+				<div class="col-md-7">
+					<div class="row">
+						<div class="col-md-4">
+							<b>ชื่อกลุ่มสิทธิ์ใช้งาน</b> :
+						</div>
+						<div class="col-md-8">ผู้ดูแลระบบ</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<b>ชื่อกลุ่มสิทธิ์ใช้งาน (Eng)</b> :
+						</div>
+						<div class="col-md-8">Admin</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<b>รายละเอียด</b> :
+						</div>
+						<div class="col-md-8">สำหรับผู้ดูแลระบบสูงสุด</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<b>สถานะการใช้งาน</b> :
+						</div>
+						<div class="col-md-8 ">
+							<b class="m--font-success">เปิดการใช้งาน</b> 
+						</div>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<fieldset>
+						<legend>&nbsp;&nbsp;จำนวนผู้ใช้งานกลุ่มสิทธิ์&nbsp;&nbsp;</legend>
+						<div class="row">
+							<div class="col-md-12" align="center">
+								<b>2 คน</b>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+
+
+
+			<!--begin: Datatable -->
+			<table class="m-datatable" width="100%">
+				<thead>
+					<tr>
+						<th title="Field #1">
+							ลำดับ
+						</th>
+						<th title="Field #2">
+							ชื่อกลุ่มผู้ใช้
+						</th>
+						<th title="Field #3">
+							ชื่อกลุ่มผู้ใช้ (Eng)
+						</th>
+						<th title="Field #4">
+							จำนวนผู้ใช้
+						</th>
+						<th title="Field #5">
+							รายละเอียด
+						</th>
+						<th title="Field #6">
+
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>ผู้ดูแลระบบ</td>
+						<td>Admin</td>
+						<td>2</td>
+						<td>สำหรับผู้ดูแลระบบสูงสุด</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>หัวหน้าสาขา</td>
+						<td>Branch Manager</td>
+						<td>20</td>
+						<td>สำหรับหัวหน้าประจำสาขาต่างๆ</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>พนักงานทั้งหมด</td>
+						<td>Personel</td>
+						<td>200</td>
+						<td>สำหรับพนักงานทั้งหมด</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>พนักงานรายชั่วโมง</td>
+						<td>Hour person</td>
+						<td>120</td>
+						<td>สำหรับพนักงานรายชั่วโมง</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>พนักงานเคาร์เตอร์</td>
+						<td>Counter</td>
+						<td>38</td>
+						<td>สำหรับผู้ดูแลระบบสูงสุด</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>CEO</td>
+						<td>CEO</td>
+						<td>1</td>
+						<td>สำหรับ CEO</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>BD</td>
+						<td>BD</td>
+						<td>1</td>
+						<td>สำหรับ BD</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>COM</td>
+						<td>COM</td>
+						<td>1</td>
+						<td>สำหรับ COM</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>CBO</td>
+						<td>CBO</td>
+						<td>1</td>
+						<td>สำหรับ CBO</td>
+						<td>
+							<a href="#" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit details">
+								<i class="la la-search"></i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--end: Datatable -->
+		</div>
+	</div>
+</div>

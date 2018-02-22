@@ -1,0 +1,687 @@
+<!-- BEGIN: Subheader -->
+<div class="m-subheader" appunwraptag="">
+	<div class="d-flex align-items-center">
+		<div class="mr-auto">
+			<h3 class="m-subheader__title m-subheader__title--separator">
+				กำหนดคุณลักษณะ
+			</h3>
+			<ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+				<li class="m-nav__item m-nav__item--home">
+					<a href="#" class="m-nav__link m-nav__link--icon">
+						<i class="m-nav__link-icon la la-home"></i>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/setup" class="m-nav__link">
+						<span class="m-nav__link-text">
+							ตั้งค่าเริ่มต้น
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<a routerLink="/setup/inventory" class="m-nav__link">
+						<span class="m-nav__link-text">
+							Inventory
+						</span>
+					</a>
+				</li>
+				<li class="m-nav__separator">
+					/
+				</li>
+				<li class="m-nav__item">
+					<span class="m-nav__link-text">
+						กำหนดคุณลักษณะ
+					</span>
+				</li>
+			</ul>
+		</div>
+		<span data-toggle="m-tooltip" title="เพิ่มคุณลักษณะ" data-placement="left">
+			<a class="btn btn-success m-btn m-btn--icon btn-lg m-btn--icon-only m-btn--pill m-btn--air" data-toggle="modal" data-target="#m_select2_modal">
+				<i class="la la-plus"></i>
+			</a>
+		</span>
+	</div>
+</div>
+<!-- END: Subheader -->
+<div class="m-content">
+	<div class="m-portlet m-portlet--mobile">
+		<div class="m-portlet__body">
+			<div class="row">
+				<div class="col-md-2">
+					<div id="categories_block_left" class="block">
+						<h3 class="title_block">กลุ่มคุณลักษณะ
+							<span data-toggle="m-tooltip" title="เพิ่มกลุ่มคุณลักษณะ" data-placement="bottom" class="float-right">
+								<a class="btn btn-success m-btn m-btn--icon m-btn--icon-only m-btn--pill btn-sm" style=" width: 24px; height: 24px;" data-toggle="modal"
+								 data-target="#add_category_modal">
+									<i class="la la-plus" style="font-size: 1rem;color:white;"></i>
+								</a>
+							</span>
+						</h3>
+
+					</div>
+					<div id="outer-wrap">
+						<div class="m-scrollable" data-scrollbar-shown="true" data-axis="xy" data-scrollable="true" data-max-height="400">
+							<!-- Navigation -->
+							<nav class="mainNav accordion-nav">
+								<ul>
+									<li>
+										<a href="#">
+											<b>กลุ่มคุณลักษณะทั้งหมด</b>
+										</a>
+									</li>
+									<li>
+										<a href="#">กลุ่มคุณลักษณะ A</a>
+									</li>
+									<li>
+										<a href="#">กลุ่มคุณลักษณะ B</a>
+									</li>
+									<li>
+										<a href="#">กลุ่มคุณลักษณะ C</a>
+									</li>
+									<li>
+										<a href="#">กลุ่มคุณลักษณะ D</a>
+									</li>
+									<li>
+										<a href="#">กลุ่มคุณลักษณะ E</a>
+									</li>
+									<li>
+										<a href="#">กลุ่มคุณลักษณะ F</a>
+									</li>
+									<li>
+										<a href="#">กลุ่มคุณลักษณะ G</a>
+									</li>
+									<li>
+										<a href="#">กลุ่มคุณลักษณะ H</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<!--begin: Search Form -->
+					<div class="m-form m-form--label-align-right m--margin-bottom-30">
+						<div class="row align-items-center">
+							<div class="col-xl-12 order-2 order-xl-1">
+								<div class="form-group m-form__group row align-items-center">
+									<div class="col-md-8">
+										<div class="m-input-icon m-input-icon--left">
+											<input type="text" class="form-control m-input" placeholder="Search..." id="generalSearch">
+											<span class="m-input-icon__icon m-input-icon__icon--left">
+												<span>
+													<i class="la la-search"></i>
+												</span>
+											</span>
+										</div>
+									</div>
+									<div class="col-md-4">
+										<div class="m-form__group m-form__group--inline">
+											<div class="m-form__label">
+												<label style="width: 120px;">
+													กลุ่มคุณลักษณะ :
+												</label>
+											</div>
+											<div class="m-form__control">
+												<select class="form-control m-bootstrap-select" id="m_form_status">
+													<option value="">
+														แสดงทั้งหมด
+													</option>
+												</select>
+											</div>
+										</div>
+										<div class="d-md-none m--margin-bottom-10"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--end: Search Form -->
+					<hr>
+					<h5>
+						<b>กลุ่มคุณลักษณะ A</b>
+						<span data-toggle="modal" data-target="#edit_category_modal" class="float-right">
+							<a class="cursor-pointer" data-toggle="m-tooltip" title="แก้ไขกลุ่มคุณลักษณะ" data-placement="left">
+								<i class="la la-edit"></i>
+							</a>
+						</span>
+					</h5>
+					<!--begin: Datatable -->
+					<table class="m-datatable" width="100%">
+						<thead>
+							<tr>
+								<th>ลำดับ</th>
+								<th title="Field #1">
+									รหัสคุณลักษณะ
+								</th>
+								<th title="Field #2">
+									ชื่อคุณลักษณะ
+								</th>
+								<th title="Field #2">
+									ชื่อคุณลักษณะ (Eng)
+								</th>
+								<th title="Field #3">
+									กลุ่มคุณลักษณะ
+								</th>
+								<th title="Field #4">
+									สถานะใช้งาน
+								</th>
+								<th title="Field #5">
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>PROC-00001</td>
+								<td>xxxxxxxxxxxxxxxxxxxxx</td>
+								<td>xxxxxxxxxxxxxxxxxxxxx</td>
+								<td>xxxxxxxxxxxxx</td>
+								<td>
+									<p class="m-badge m-badge--success"></p> เปิด
+								</td>
+								<td>
+									<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+									 title="Edit details">
+										<i class="la la-search"></i>
+									</a>
+									<a data-toggle="modal" data-target="#edit_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-warning m-btn--icon m-btn--icon-only m-btn--pill"
+									 title="Edit details">
+										<i class="la la-edit"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>PROC-00002</td>
+								<td>xxxxxxxxxxxxxxxxxxxxx</td>
+								<td>xxxxxxxxxxxxxxxxxxxxx</td>
+								<td>xxxxxxxxxxxxx</td>
+								<td>
+									<p class="m-badge m-badge--success"></p> เปิด
+								</td>
+								<td>
+									<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+									 title="Edit details">
+										<i class="la la-search"></i>
+									</a>
+									<a data-toggle="modal" data-target="#edit_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-warning m-btn--icon m-btn--icon-only m-btn--pill"
+									 title="Edit details">
+										<i class="la la-edit"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>PROC-00003</td>
+								<td>xxxxxxxxxxxxxxxxxxxxx</td>
+								<td>xxxxxxxxxxxxxxxxxxxxx</td>
+								<td>xxxxxxxxxxxxx</td>
+								<td>
+									<p class="m-badge m-badge--success"></p> เปิด
+								</td>
+								<td>
+									<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+									 title="Edit details">
+										<i class="la la-search"></i>
+									</a>
+									<a data-toggle="modal" data-target="#edit_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-warning m-btn--icon m-btn--icon-only m-btn--pill"
+									 title="Edit details">
+										<i class="la la-edit"></i>
+									</a>
+								</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>PROC-00004</td>
+								<td>xxxxxxxxxxxxxxxxxxxxx</td>
+								<td>xxxxxxxxxxxxxxxxxxxxx</td>
+								<td>xxxxxxxxxxxxx</td>
+								<td class="m--font-danger">
+									<p class="m-badge m-badge--danger"></p> ปิด
+								</td>
+								<td>
+									<a data-toggle="modal" data-target="#view_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill"
+									 title="Edit details">
+										<i class="la la-search"></i>
+									</a>
+									<a data-toggle="modal" data-target="#edit_modal" class="m-portlet__nav-link btn m-btn m-btn--hover-warning m-btn--icon m-btn--icon-only m-btn--pill"
+									 title="Edit details">
+										<i class="la la-edit"></i>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!--end: Datatable -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--begin::Add Modal-->
+	<div class="modal fade" id="m_select2_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="">
+						<i class="la la-plus"></i> เพิ่มคุณลักษณะ
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" class="la la-remove"></span>
+					</button>
+				</div>
+				<form class="m-form m-form--fit m-form--label-align-right">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อคุณลักษณะ :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อคุณลักษณะ (Eng) :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ (Eng)">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="form-group">
+									<label class="form-control-label" style="width:100%">
+										กลุ่มคุณลักษณะ :
+										<a class="btn btn-success m-btn m-btn--icon m-btn--icon-only m-btn--pill btn-sm" style="
+											float: right; width: 24px; height: 24px;" data-toggle="m-tooltip" title="เพิ่มกลุ่มคุณลักษณะ" data-placement="left"
+										 (click)="newFeature=0" [hidden]="newFeature==false">
+											<i class="la la-plus" style="font-size: 1rem;color:white;"></i>
+										</a>
+										<a class="btn btn-danger m-btn m-btn--icon m-btn--icon-only m-btn--pill btn-sm" style="
+											float: right; width: 24px; height: 24px;" data-toggle="m-tooltip" title="ยกเลิกเพิ่มคุณลักษณะ" data-placement="left"
+										 (click)="newFeature=1" [hidden]="newFeature">
+											<i class="la la-times" style="font-size: 1rem;color:white;"></i>
+										</a>
+									</label>
+									<div [hidden]="newFeature ==false">
+										<select class="form-control m-select2" id="m_select2_1_modal" name="param">
+											<option>
+												กลุ่มคุณลักษณะ A
+											</option>
+											<option>
+												กลุ่มคุณลักษณะ B
+											</option>
+											<option>
+												กลุ่มคุณลักษณะ C
+											</option>
+											<option>
+												กลุ่มคุณลักษณะ D
+											</option>
+										</select>
+									</div>
+									<div [hidden]="newFeature">
+										<fieldset>
+											<legend>&nbsp;&nbsp;&nbsp;สร้างกลุ่มคุณลักษณะใหม่&nbsp;&nbsp;&nbsp;</legend>
+											<div class="row mt-2">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															ชื่อกลุ่มคุณลักษณะ :
+														</label>
+														<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															ชื่อกลุ่มคุณลักษณะ (Eng) :
+														</label>
+														<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ (Eng)">
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="message-text" class="form-control-label">
+										รายละเอียดคุณลักษณะ :
+									</label>
+									<textarea class="form-control" id="message-text" placeholder="กรุณากรอกรายละเอียด"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary m-btn" data-dismiss="modal">
+							บันทึก
+						</button>
+						<button type="button" class="btn btn-secondary m-btn" data-dismiss="modal">
+							ยกเลิก
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--end:: Add Modal-->
+
+
+
+	<!--begin::Edit Modal-->
+	<div class="modal fade m_select2_modal" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="">
+						<i class="la la-edit"></i> แก้ไขคุณลักษณะ
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" class="la la-remove"></span>
+					</button>
+				</div>
+				<form class="m-form m-form--fit m-form--label-align-right">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อคุณลักษณะ :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ" value="xxxxxxxxxx">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อคุณลักษณะ (Eng) :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ (Eng)" value="xxxxxxxxxx">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="form-group">
+									<label class="form-control-label" style="width:100%">
+										กลุ่มคุณลักษณะ :
+										<a class="btn btn-success m-btn m-btn--icon m-btn--icon-only m-btn--pill btn-sm" style="
+											float: right; width: 24px; height: 24px;" data-toggle="m-tooltip" title="เพิ่มกลุ่มคุณลักษณะ" data-placement="left"
+										 (click)="newFeatureEdit=0" [hidden]="newFeatureEdit==false">
+											<i class="la la-plus" style="font-size: 1rem;color:white;"></i>
+										</a>
+										<a class="btn btn-danger m-btn m-btn--icon m-btn--icon-only m-btn--pill btn-sm" style="
+											float: right; width: 24px; height: 24px;" data-toggle="m-tooltip" title="ยกเลิกเพิ่มคุณลักษณะ" data-placement="left"
+										 (click)="newFeatureEdit=1" [hidden]="newFeatureEdit">
+											<i class="la la-times" style="font-size: 1rem;color:white;"></i>
+										</a>
+									</label>
+									<div [hidden]="newFeatureEdit ==false">
+										<select class="form-control m-select2" id="m_select2_2_modal" name="param">
+											<option>
+												กลุ่มคุณลักษณะ A
+											</option>
+											<option>
+												กลุ่มคุณลักษณะ B
+											</option>
+											<option>
+												กลุ่มคุณลักษณะ C
+											</option>
+											<option>
+												กลุ่มคุณลักษณะ D
+											</option>
+										</select>
+									</div>
+									<div [hidden]="newFeatureEdit">
+										<fieldset>
+											<legend>&nbsp;&nbsp;&nbsp;สร้างกลุ่มคุณลักษณะใหม่&nbsp;&nbsp;&nbsp;</legend>
+											<div class="row mt-2">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															ชื่อกลุ่มคุณลักษณะ :
+														</label>
+														<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label for="recipient-name" class="form-control-label">
+															ชื่อกลุ่มคุณลักษณะ (Eng) :
+														</label>
+														<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ (Eng)">
+													</div>
+												</div>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="message-text" class="form-control-label">
+										รายละเอียดคุณลักษณะ :
+									</label>
+									<textarea class="form-control" id="message-text" placeholder="กรุณากรอกรายละเอียด">xxxxxxx</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary m-btn" data-dismiss="modal">
+							บันทึก
+						</button>
+						<button type="button" class="btn btn-secondary m-btn" data-dismiss="modal">
+							ยกเลิก
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--end:: Edit Modal-->
+
+	<!--begin::View Modal-->
+	<div class="modal fade" id="view_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						รายละเอียดคุณลักษณะ
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">
+							&times;
+						</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										รหัสคุณลักษณะ :
+									</label>
+									<br>PROC-00001</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อคุณลักษณะ :
+									</label>
+									<br>xxxxxxxxxxx</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อคุณลักษณะ (Eng) :
+									</label>
+									<br>xxxxxxxxxxx</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										สถานะการใช้งาน :
+									</label>
+									<br>
+									<p class="m-badge m-badge--success"></p> เปิดใช้งาน</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ผู้บันทึกข้อมูล :
+									</label>
+									<br>ณัฐพล ชัยสุวรรณ</div>
+							</div>
+							<div class="col-md-4">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										บันทึกเมื่อ :
+									</label>
+									<br>14 ก.พ. 2561 (08:00 น.)</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">
+						ปิด
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--end:: View Modal-->
+
+	<!--begin::Add Modal-->
+	<div class="modal fade" id="add_category_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="">
+						<i class="la la-plus"></i> เพิ่มกลุ่มคุณลักษณะ
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" class="la la-remove"></span>
+					</button>
+				</div>
+				<form class="m-form m-form--fit m-form--label-align-right">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อกลุ่มคุณลักษณะ :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อกลุ่มคุณลักษณะ (Eng) :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ (Eng)">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary m-btn" data-dismiss="modal">
+							บันทึก
+						</button>
+						<button type="button" class="btn btn-secondary m-btn" data-dismiss="modal">
+							ยกเลิก
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--end:: Add Modal-->
+
+	<!--begin::Edit Modal-->
+	<div class="modal fade" id="edit_category_modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="">
+						<i class="la la-edit"></i> แก้ไขกลุ่มคุณลักษณะ
+					</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true" class="la la-remove"></span>
+					</button>
+				</div>
+				<form class="m-form m-form--fit m-form--label-align-right">
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อกลุ่มคุณลักษณะ :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ" value="xxxxxx">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="recipient-name" class="form-control-label">
+										ชื่อกลุ่มคุณลักษณะ (Eng) :
+									</label>
+									<input type="text" class="form-control" placeholder="กรุณากรอกชื่อคุณลักษณะ (Eng)" value="xxxxxx">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div style="width:100%">
+							<button type="button" class="btn btn-danger m-btn float-left" data-dismiss="modal">
+								ลบ
+							</button>
+
+							<button type="button" class="btn btn-secondary m-btn float-right" data-dismiss="modal">
+								ยกเลิก
+							</button>
+							<button type="button" class="btn btn-primary m-btn float-right" data-dismiss="modal" style=" margin-right: 5px; ">
+								บันทึก
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--end:: Edit Modal-->
+
+</div>
